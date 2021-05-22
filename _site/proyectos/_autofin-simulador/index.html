@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Autofin Simulador - Arturo Jofré - Experiencia de usuario y desarrollo web.</title>
+	<meta name="description" content="Arturo Jofre Lopez, UX UI Designer, Diseño y Desarrollo Web, Front End Designer, Developer, Experiencia de Usuario">
+	<meta name="keywords" content="front end design, diseño gráfico, graphic design, HTML, CSS, HTML5, CSS3, jquery, digital art director, web design, diseño web, director de arte digital, UX, UI, experiencia de usuario, arquitectura de informacion, diseño de interfaz, mobile design, diseño movil, responsive design, user experience, user interface, usability, usabilidad web, diseño de interaccion">
+	<meta name="theme-color" content="#292929">
+	<link rel="alternate" href="http://arturojofre.cl" hreflang="es-cl" />
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25357532-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-25357532-1');
+	</script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<nav>
+				<a href="/"><img class="logo" src="/assets/img/arturojofre_logo.svg" alt="Logo Arturo Jofré"></a>
+				<ul class="nav-menu">
+					<li><a class="link" href="/proyectos">Proyectos</a></li>
+					<li><a class="link" href="/sobre-mi">Sobre mi</a></li>
+					<li><a class="link" href="/#que-hago">Qué hago</a></li>
+					<li><a class="link" href="/#contacto">Contactame</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+   
+	<main id="swup" class="transition-fade single-project">
+	<div class="container">
+		<div class="project-info">
+			<h1>Autofin Simulador</h1>
+			<p>2020</p>
+			<p> Diseñador UX</p>
+			<p> </p>
+			<a href="" target="_blank"> Ir al sitio</a>
+		</div>
+		<div class="project-intro">
+			<p>Que es el autofin</p>
+
+		</div>
+		
+	</div>
+</main>
+
+
+	<footer id="contacto">
+		<div class="container">
+			<div class="grid">
+				<div>
+					<h2>¿Tienes un proyecto?</h2>
+					<h2>Conversemos</h2>
+				</div>
+				<div></div>
+				<div>
+					<p>Arturo Jofré 2020.</p>
+					<p>Diseño, desarrollo & experiencia de usuario.</p>
+					<a href="">hola@arturojofre.cl</a>
+					
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+	<script src="/assets/js/SwupScrollPlugin.min.js"></script>
+	<script>
+		const swup = new Swup({
+		plugins: [new SwupScrollPlugin()]
+		});
+		
+		new SwupScrollPlugin({
+			doScrollingRightAway: true,
+			animateScroll: true,
+			scrollFriction: 0.3,
+			scrollAcceleration: 0.08,
+		});
+	</script>
+
+</body>
+</html>
