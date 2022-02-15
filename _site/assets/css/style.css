@@ -102,10 +102,6 @@ body.light {
   color: #1B1919;
 }
 
-body.light a :not(.pavlov), body.light a :not(.aureolab) {
-  color: #1B1919;
-}
-
 h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -122,6 +118,10 @@ h3 {
 
 a {
   color: white;
+}
+
+body.light a {
+  color: #1B1919;
 }
 
 .ml-auto {
@@ -162,7 +162,7 @@ a {
   color: white;
   display: inline-block;
   padding: .25rem .75rem;
-  border-radius: 2rem;
+  border-radius: .75rem;
   text-decoration: none;
   -webkit-transition: .3s ease;
   transition: .3s ease;
@@ -176,8 +176,8 @@ a {
 
 .btn-primary {
   color: white;
-  border-color: white;
-  background-color: transparent;
+  border-color: #353131;
+  background-color: #353131;
 }
 
 .btn-primary:hover {
@@ -200,6 +200,12 @@ body.light .btn {
   background-color: #e2d9d4;
 }
 
+body.light .btn:hover {
+  color: #e2d9d4;
+  border-color: #353131;
+  background-color: #353131;
+}
+
 main {
   min-height: 100%;
   padding-bottom: 6rem;
@@ -208,6 +214,7 @@ main {
 header {
   position: fixed;
   width: 100%;
+  z-index: 1;
   background-color: #1B1919;
 }
 
@@ -231,6 +238,44 @@ nav {
 
 nav .logo {
   height: 3rem;
+}
+
+nav .brand {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  margin-right: auto;
+}
+
+nav .switch {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  width: 40px;
+}
+
+nav .toggle {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+@media (min-width: 767px) {
+  nav .brand {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  nav .nav-menu {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  nav .switch {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
 }
 
 .nav-menu {
@@ -264,8 +309,9 @@ body.light .nav-menu.active {
 
 .nav-menu .nav-link {
   width: 100%;
-  padding: 1rem;
   font-size: 2rem;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
 }
 
 .nav-menu .nav-link a {
@@ -274,10 +320,13 @@ body.light .nav-menu.active {
   transition: .3s ease;
   color: #e2d9d4;
   font-weight: 600;
+  padding: .75rem 1rem;
+  border-radius: .5rem;
 }
 
 .nav-menu .nav-link a:hover {
   color: #fff;
+  background-color: #746e69;
 }
 
 body.light .nav-menu .nav-link a {
@@ -286,6 +335,7 @@ body.light .nav-menu .nav-link a {
 
 body.light .nav-menu .nav-link a:hover {
   color: #1B1919;
+  background-color: #e2d9d4;
 }
 
 @media (min-width: 767px) {
@@ -357,8 +407,14 @@ body.light .nav-menu .nav-link a:hover {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #BAAFA8;
+}
+
+@media (min-width: 767px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
 }
 
 @media (min-width: 767px) {
@@ -368,10 +424,16 @@ body.light .nav-menu .nav-link a:hover {
 }
 
 .hero .subtitle {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 2.5rem;
   margin-bottom: 2rem;
   font-weight: 600;
+}
+
+@media (min-width: 767px) {
+  .hero .subtitle {
+    font-size: 2.5rem;
+  }
 }
 
 .hero .cta {
@@ -401,7 +463,13 @@ body.light .nav-menu .nav-link a:hover {
 }
 
 .about p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 767px) {
+  .about p {
+    font-size: 1.5rem;
+  }
 }
 
 .about p + p {
@@ -643,7 +711,9 @@ body.light .services .service {
 }
 
 footer {
-  height: 14rem;
+  padding: 4rem 0;
+  border-top: 1px solid white;
+  min-height: 20rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -671,23 +741,33 @@ footer .grid {
   }
 }
 
-.pavlov {
+.pavlov, body.light .pavlov {
   color: #FF6C36;
   font-weight: 700;
   text-decoration: none;
 }
 
-.pavlov:hover {
+.pavlov:hover, body.light .pavlov:hover {
   text-decoration: underline;
 }
 
-.aureolab {
+.aureolab, body.light .aureolab {
   color: #fed136;
   font-weight: 700;
   text-decoration: none;
 }
 
-.aureolab:hover {
+.aureolab:hover, body.light .aureolab:hover {
+  text-decoration: underline;
+}
+
+.multiplica, body.light .multiplica {
+  color: #FF3429;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.multiplica:hover, body.light .multiplica:hover {
   text-decoration: underline;
 }
 

@@ -1,0 +1,19 @@
+---
+layout: base.njk
+permalink: /proyectos/
+title: Proyectos
+---
+<main id="swup" class="transition-fade page-portafolio">
+<section class="portafolio">
+    <div class="container">
+        <div class="intro">
+            <h1>Proyectos</h1>
+            <p>Algunos de los proyectos en los he trabajado durante los últimos años.</p>
+        </div>
+        <div class="grid">
+        {% set listaproyectos = collections.proyectos %}
+        {% include "listaproyectos.njk" %}
+        </div>
+    </div>
+</main>
+</section>

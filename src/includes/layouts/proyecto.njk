@@ -1,0 +1,18 @@
+---
+layout: base.njk
+---
+<main id="swup" class="transition-fade single-project">
+	<div class="container">
+		<div class="project-info">
+			<h1>{{ title }}</h1>
+			<p>{{ year }}</p>
+			<p> {{ rol }}</p>
+			<p> {{ type }}</p>
+			<a href="{{ url }}" target="_blank"> Ir al sitio</a>
+		</div>
+		<div class="project-intro">
+			{{ content | safe}}
+		</div>
+		{# <img src="{{ image }}" alt=""> #}
+	</div>
+</main>

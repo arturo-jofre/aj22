@@ -1,0 +1,27 @@
+
+{% for proyectos in listaproyectos | reverse %}
+	{# <article class="project">
+		<img src="{{ proyectos.data.thumb }}" alt="{{proyectos.data.title}}">
+		
+		<div class="info" style="background-color: {{ proyectos.data.color }};">
+			<h3>{{ proyectos.data.title }}</h3>
+			<p>{{ proyectos.data.type }}</p>
+			<p>{{ proyectos.data.year }}</p>
+			<a class="btn btn-primary" href="{{ proyectos.url | url }}">VER</a>
+		</div>
+	</article> #}
+
+	<article class="project">
+		<img src="{{ proyectos.data.thumb }}" alt="{{proyectos.data.title}}">
+		
+		<div class="info">
+			<h3>{{ proyectos.data.title }}</h3>
+			<p>{{ proyectos.data.type }}</p>
+			<p>{{ proyectos.data.year }}</p>
+			
+		</div>
+		<div class="text-right">
+			<a class="btn btn-primary btn-expand" href="{{ proyectos.url | url }}">VER</a>
+		</div>
+	</article>
+{% endfor %}
