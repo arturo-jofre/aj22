@@ -13,4 +13,4 @@ rol: "Diseñador UX, Front-end Developer Wordpress"
 La Universidad de O’Higgins es una institución de educación superior estatal. Creada en 2015 como la primera universidad publica de la región de O'higgins. La Universidad  comenzó su actividad académica con 13 carreras en 2017.
 
 
-<img src="/assets/img/portafolio/uoh-admision-2017.png"> 
+<img class="fullpage-img" src="/assets/img/portafolio/uoh-admision-2017.png"> 

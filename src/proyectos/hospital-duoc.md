@@ -5,7 +5,6 @@ description: Autofin hasta el fin
 url: https://hospitalvirtual.duoc.cl
 year: 2020
 date: 2020-09-01
-image: /assets/img/portafolio/p-hospitalvirtual-duoc.png
 thumb: /assets/img/portafolio/thumbs/hospitalvirtual-duocuc.png
 color: "#00D9C6"
 rol: Diseñador UX, Front-end Developer Wordpress
@@ -19,4 +18,4 @@ Su objetivo es contribuir al cumplimiento del Perfil de Egreso de los estudiante
 
 El modelo se dirige a estudiantes de inicio 2020 en adelante, quienes deben aprobar esta metodología para continuar con su internado profesional. Igualmente, estudiantes de generaciones anteriores pueden utilizarla, según la situación de cada sede.
 
-<img src="/assets/img/portafolio/hospitalvirtual-duoc.png"> 
+<img src="/assets/img/portafolio/hospitalvirtual-duocuc.png">

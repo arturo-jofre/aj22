@@ -13,7 +13,7 @@ cliente: Autofin
 
 Nuevo portal clientes Autofin. Autofin es una empresa dedicada al financiamiento automotriz que otorga créditos para financiar la compra de vehículos nuevos, usados, de uso particular o comercial.
 
-<img src="/assets/img/portafolio/autofin-portal.png"> 
+<img src="/assets/img/portafolio/autofin-portal-clientes.png"> 
 
 <div class="prototype">
 	<iframe src="https://marvelapp.com/prototype/26267e2g?emb=1&iosapp=false&frameless=false" width="100%" height="900" allowTransparency="true" frameborder="0"></iframe>

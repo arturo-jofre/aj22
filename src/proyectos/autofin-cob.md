@@ -1,7 +1,7 @@
 ---
 layout: "layouts/proyecto.njk"
-title: "Autofin Cob"
-description: "Autofin hasta el fin"
+title: "Software de cobranzas Autofin"
+description: "Diseño de un software para la gestión y seguimiento de cobranzas para Autofin"
 year: "2019"
 date: "2019-10-01"
 thumb: "/assets/img/portafolio/thumbs/autofin-cob.png"
@@ -12,4 +12,4 @@ rol: "Diseñador UX"
 
 Software para la gestión de cobranzas, Autofin es una empresa dedicada al financiamiento automotriz que otorga créditos para financiar la compra de vehículos nuevos, usados, de uso particular o comercial.
 
-<img src="/assets/img/portafolio/autofin-cob.png"> 
+<img src="/assets/img/portafolio/autofin-cobranzas.png.png"> 

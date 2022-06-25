@@ -1,23 +1,26 @@
 {
-  "name": "arturojofre_2020",
+  "name": "aj22",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@11ty/eleventy": "^1.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arturo-jofre/arturojofre_2020.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/arturo-jofre/arturojofre_2020/issues"
   },
   "homepage": "https://github.com/arturo-jofre/arturojofre_2020#readme",
-  "description": ""
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  },
+  "dependencies": {
+    "feather-icons": "^4.28.0"
+  }
 }

@@ -3,12 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Inicio - Arturo Jofré - Experiencia de usuario, diseño y desarrollo web.</title>
-	<meta name="description" content="Experiencia de usuario, diseño de interfaces y Desarrollo Web, Front End Designer & Developer.">
-	<meta name="keywords" content="experiencia de usuario, arquitectura de informacion, diseño de interfaz, mobile design, diseño movil, responsive design, user experience, user interface, usability, usabilidad web, diseño de interaccion, diseño gráfico, graphic design, HTML, CSS, HTML5, CSS3, jquery, digital art director, web design, diseño web, director de arte digital, UX, UI, front end design">
+	<title> Arturo Jofré - Product Designer, UX, UI, developer en Santiago de Chile</title>
+	<meta name="author" content="Arturo Jofré">
+  	<meta name="description" content="Product Designer, UI, UX, Front End Designer &amp; Developer, en Santiago de Chile. Ayudo a empresas y startups a crear productos digitales.">
+	<meta name="keywords" content="Product Designer, UX, UI, front end developer, experiencia de usuario, arquitectura de informacion, diseño de interfaz, user experience, usability, usabilidad, diseño de interaccion, diseño gráfico, graphic design, web design, diseño web">
+  	<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
 	<meta name="theme-color" content="#292929">
+	<meta name="color-scheme" content="dark light">
 	<link rel="alternate" href="http://arturojofre.cl" hreflang="es-cl" />
-	<link rel="icon" type="image/png" href="/assets/img/favicon.svg">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -21,7 +23,7 @@
 		gtag('config', 'UA-25357532-1');
 	</script>
 </head>
-<body>
+<body id="test">
 	<header>
 		<div class="container">
 			<nav class="navbar">
@@ -32,33 +34,35 @@
 					<li class="nav-link"><a href="/#que-hago">Qué hago</a></li>
 					<li class="nav-link"><a href="/#contacto">Contactame</a></li>
 				</ul>
-				<button class="switch" id="switch"></button>
+				<button aria-label="theme-switch" class="switch" id="switch"> <i data-feather="sun"></i></button>
 				<button class="toggle">Menu</button>
-				
 			</nav>
 		</div>
 	</header>
-   
+
 	<main id="swup" class="transition-fade">
 	<section class="hero">
 		<div class="container middle">
 			<div class="box">
-				<h1>Arturo Jofré López</h1>
-				<h2 class="subtitle">Diseñador Gráfico, Diplomado en Arquitectura de la información y Experiencia de usuario.</h2>
+				<h1 class="text-fill holo" id="holo">Arturo Jofré López</h1>
+				<h2 class="subtitle">Product designer, ayudo a empresas y startups a crear  interacciones, intuitivas y agradables para apps y web.</h2>
 				<h3 class="cta">¿Tienes un nuevo proyecto o quieres mejorar uno existente?</h3>
-				<a class="btn btn-primary" href="#contacto">Conversemos</a>
+				<a class="btn btn-md  btn-primary" href="#contacto">Conversemos <i data-feather="arrow-right"></i></a></a>
 			</div>
 		</div>
 	</section>
 	<section class="about">
-		<div class="container">
+		<div class="container stack">
 			<h2>Sobre mi</h2>
 			
 			<p>Me llamo Arturo Jofré López, diseñador gráfico Duoc UC, Diplomado en Arquitectura de Información y Experiencia de Usuario en Universidad Central de Chile, vivo en Santiago pero soy oriundo de Tucapel, hace más de 10 años que me dedico al diseño y al desarrollo web. Hoy me especializo en usabilidad y experiencia de usuario.</p>
-			<p>En el 2015 co-funde la agencia <a class="pavlov" href="http://www.pavlov.cl">Pávlov</a> con un par de amigos.</p>
-			<p>Actualmente trabajo en <a class="multiplica" href="https://www.multiplica.com/">Multiplica</a>, diseñando UX para software de grandes empresas.</p>
-			<a class="btn" href="/sobre-mi">Más</a>
 
+			<p>Actualmente trabajo en <a class="multiplica" href="https://www.multiplica.com/">Multiplica</a>, como diseñador UX</p>
+			
+			<p>En 2015 co-funde <a class="pavlov" href="http://www.pavlov.cl">Pávlov</a> con un par de amigos.</p>
+
+			<p>Puedes contratar mis servicios como freelance o como agencia</p>
+			<a class="btn btn-md btn-primary" href="/sobre-mi">Más</a>
 		</div>
 	</section>
 	
@@ -68,106 +72,93 @@
 			<div class="grid">
 				
 				
-
 	
 
 	<article class="project">
-		<img src="/assets/img/portafolio/thumbs/arete-duoc.png" alt="Areté Revista de Humanidades Duoc UC">
+		<img loading="lazy" src="/assets/img/portafolio/thumbs/extension-duoc-21.png" alt="Extensión Duoc UC 2021">
 		
-		<div class="info">
-			<h3>Areté Revista de Humanidades Duoc UC</h3>
-			<p></p>
-			<p>2020</p>
-			
-		</div>
-		<div class="text-right">
-			<a class="btn btn-primary btn-expand" href="/proyectos/arete-duocuc/">VER</a>
-		</div>
+		<a class="info info-expand" href="/proyectos/extension-duoc-2021/">
+			<h3>Extensión Duoc UC 2021</h3>
+			<p>2021</p>
+		</a>
+		
+	
+		
 	</article>
 
 	
 
 	<article class="project">
-		<img src="/assets/img/portafolio/thumbs/tolivmarket.png" alt="Tolivmarket">
+		<img loading="lazy" src="/assets/img/portafolio/thumbs/tolivmarket.png" alt="Tolivmarket">
 		
-		<div class="info">
+		<a class="info info-expand" href="/proyectos/tolivmarket/">
 			<h3>Tolivmarket</h3>
-			<p>UX UI</p>
 			<p>2020</p>
-			
-		</div>
-		<div class="text-right">
-			<a class="btn btn-primary btn-expand" href="/proyectos/tolivmarket/">VER</a>
-		</div>
+		</a>
+		
+	
+		
 	</article>
 
 	
 
 	<article class="project">
-		<img src="/assets/img/portafolio/thumbs/toliv.png" alt="Rediseño de la plataforma de eventos Toliv.io">
+		<img loading="lazy" src="/assets/img/portafolio/thumbs/toliv.png" alt="Rediseño de la plataforma de eventos Toliv.io">
 		
-		<div class="info">
+		<a class="info info-expand" href="/proyectos/toliv/">
 			<h3>Rediseño de la plataforma de eventos Toliv.io</h3>
-			<p></p>
 			<p>2020</p>
-			
-		</div>
-		<div class="text-right">
-			<a class="btn btn-primary btn-expand" href="/proyectos/toliv/">VER</a>
-		</div>
+		</a>
+		
+	
+		
 	</article>
 
 	
 
 	<article class="project">
-		<img src="/assets/img/portafolio/kidsbook.png" alt="Nueva App Kidsbook">
+		<img loading="lazy" src="/assets/img/portafolio/kidsbook.png" alt="Nueva App Kidsbook">
 		
-		<div class="info">
+		<a class="info info-expand" href="/proyectos/kidsbook/">
 			<h3>Nueva App Kidsbook</h3>
-			<p></p>
 			<p>2020</p>
-			
-		</div>
-		<div class="text-right">
-			<a class="btn btn-primary btn-expand" href="/proyectos/kidsbook/">VER</a>
-		</div>
+		</a>
+		
+	
+		
 	</article>
 
 	
 
 	<article class="project">
-		<img src="/assets/img/portafolio/thumbs/regalanovios.png" alt="Una nueva nueva forma de regalar para Regalanovios">
+		<img loading="lazy" src="/assets/img/portafolio/thumbs/regalanovios.png" alt="Una nueva nueva forma de regalar para Regalanovios">
 		
-		<div class="info">
+		<a class="info info-expand" href="/proyectos/regalanovios/">
 			<h3>Una nueva nueva forma de regalar para Regalanovios</h3>
-			<p></p>
 			<p>2019</p>
-			
-		</div>
-		<div class="text-right">
-			<a class="btn btn-primary btn-expand" href="/proyectos/regalanovios/">VER</a>
-		</div>
+		</a>
+		
+	
+		
 	</article>
 
 	
 
 	<article class="project">
-		<img src="/assets/img/portafolio/thumbs/autofin-web.png" alt="Rediseño del sitio corpotativo de Autofin">
+		<img loading="lazy" src="/assets/img/portafolio/thumbs/autofin-web.png" alt="Rediseño del sitio corpotativo de Autofin">
 		
-		<div class="info">
+		<a class="info info-expand" href="/proyectos/autofin/">
 			<h3>Rediseño del sitio corpotativo de Autofin</h3>
-			<p></p>
 			<p>2019</p>
-			
-		</div>
-		<div class="text-right">
-			<a class="btn btn-primary btn-expand" href="/proyectos/autofin/">VER</a>
-		</div>
+		</a>
+		
+	
+		
 	</article>
 
 
 				<div class="more">
-				<a class="btn btn-primary" href="/proyectos">Ver todos</a>
+					<a class="btn btn-md btn-primary" href="/proyectos">Ver todos</a>
 				</div>
 			</div>
 		</div>
@@ -179,52 +170,74 @@
 			<div class="grid">
 				<div class="service">
 					<h3>Experiencia de usuario UX</h3>
-					<p>La investigación, arquitectura de información, y usabilidad. Son la base para entender y empatizar con los usuarios y generar una propuesta de valor.</p>
+					<p>Escuchar, entender y empatizar es lo principal para conocer a los usuarios a traves de la investigación y definición de estrategias. Para crear soluciones con una buena arquitectura de información, usables y accesibles.</p>
 				</div>
 				
 				<div class="service">
 					<h3>Diseño de interfaces UI</h3>
-					<p>Un buen diseño de interfaces facilita de usuario completar de tareas. Lograr un balance entre los colores, diagramación, tipografia, elementos visuales y la identidad de la marca. Para conectar con los usuarios.</p>
+					<p>Una buena experiencia requiere que el diseño facilite al usuario completar de tareas. Balanceando la identidad de la marca, diseño visual y la accecibilidad.</p>
 				</div>
 				<div class="service">
 					<h3>Desarrollo web Front-end</h3>
-					<p>Convertir el diseño visual e interactivo en sitios web con las tecnologías HTML5, CSS3, Javascript, contruidas pensando en las buenas practicas, performace y SEO, principalmente en la plataforma autoadministrable CMS Wordpress.</p>
+					<p>Convertir el diseño visual e interactivo en sitios web con las tecnologías HTML5, CSS3, Javascript, considerando accesibilidad, performace y SEO.</p>
 				</div>
 				<div class="service">
-					<h3>Diseño Gráfico & Branding</h3>
-					<p>Diseño de logotipos, marca gráfica e identidad visual y consultoría para tu marca.</p>
+					<h3>Branding e identidad de marca</h3>
+					<p>Una identidad de marca no es solo un logotipo, es como se presenta visualmente una marca a las personas. Algunos de los elementos o componentes que construyen la identidad de marca como un todo; tipografía, colores, sistema iconográfico, patrones, estilo fotográfico, entre otros. </p>
 				</div>
 			</div>
 			
 		</div>
 	</section>
+
 </main>
 
 	<footer id="contacto">
-		<div class="container">
+		<div class="container stack">
 			<div class="grid">
 				<div>
 					<h2>¿Tienes un proyecto?</h2>
-					<h3>Conversemos</h3>
+					<h3>Conversemos </h3>
+					<a class="mail" href="mailto:hola@arturojofre.cl">hola@arturojofre.cl</a>
 				</div>
-				<div></div>
+				
 				<div>
-					<p>Arturo Jofré 2022.</p>
-					<p>UX, diseño & desarrollo.</p>
-					<a href="mailto:hola@arturojofre.cl">hola@arturojofre.cl</a>
-					
+					<ul class="social">
+						<li><a href="https://www.linkedin.com/in/arturojofre/"><i data-feather="linkedin"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/arturojofre/"><i data-feather="dribbble"></i></a></li>
+					</ul>
 				</div>
 			</div>
-			<p>Made with <a href="https://www.11ty.dev/">11ty</a>, & <3</p>
+			<div class="grid">
+				<p>Made with <a target="_blank" href="https://www.11ty.dev/">11ty</a>, & <3</p><p class="text-right">Arturo Jofré 2022.</p>
+			</div>
 		</div>
 	</footer>
+
+	<svg aria-hidden="true" focusable="false" style="width:0;height:0;position:absolute;">
+	<linearGradient id="gradient-horizontal">
+		<stop offset="0%" stop-color="var(--color-stop-1)" />
+		<stop offset="50%" stop-color="var(--color-stop-2)" />
+		<stop offset="100%" stop-color="var(--color-stop-3)" />
+	</linearGradient>
+	<linearGradient id="gradient-vertical" x2="0" y2="1">
+		<stop offset="0%" stop-color="var(--color-stop-1)" />
+		<stop offset="50%" stop-color="var(--color-stop-2)" />
+		<stop offset="100%" stop-color="var(--color-stop-3)" />
+	</linearGradient>
+	</svg>
+	
 	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 	<script src="/assets/js/SwupScrollPlugin.min.js"></script>
+	<script src="/assets/js/SwupPreloadPlugin.min.js"></script>
+	<script src="/assets/js/feather.min.js"></script>
 	<script src="/assets/js/main.js"></script>
+	
 	<script>
 		const swup = new Swup({
-		plugins: [new SwupScrollPlugin()]
+		plugins: [new SwupScrollPlugin()],
 		});
+		
 		
 		new SwupScrollPlugin({
 			doScrollingRightAway: true,
@@ -232,6 +245,8 @@
 			scrollFriction: 0.3,
 			scrollAcceleration: 0.08,
 		});
+		
+
 	</script>
 
 </body>

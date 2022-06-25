@@ -1,32 +1,83 @@
 @import "reset";
 @import "responsive";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap');
 
 // COLORES
+// $dark: #1B1919;
+// $light: #f0eae6;
+// $grey-100:#f0eae6;
+// $grey-300: #e2d9d4;
+// $grey-500: #BAAFA8;
+// $grey-600: #736d68;
+// $grey-800: #353131;
 
-$dark: #1B1919;
-$light: #f0eae6;
-$grey-100:#f0eae6;
-$grey-300: #e2d9d4;
-$grey-500: #BAAFA8;
-$grey-600: #746e69;
+$dark: hsl(0, 4%, 10%);
+$light: hsl(24, 25%, 92%);
+$grey-100:hsl(24, 25%, 92%);
+$grey-300: hsl(21, 19%, 86%);
+$grey-500: hsl(23, 12%, 69%);
+$grey-600: hsl(27, 5%, 43%);
 $grey-800: hsl(0, 4%, 20%);
+
+:root {
+	color-scheme: light dark; /* both supported */
+}
 
 html {
 	height: 100%;
 }
+
 body {
+	// background-color: $dark;
 	background-color: $dark;
+	opacity: 1;
+	background-image: radial-gradient($grey-800 2px, transparent 2px);
+	background-size: 56px 56px;
 	color: white;
 	font-size: 16px;
 	font-family: 'Inter', sans-serif;
-	font-weight: 100;
+	font-weight: 400;
 	scroll-behavior: smooth;
 	height: 100%;
 	&.light {
 		background-color: $light ;
 		color: $dark;
+		background-image: radial-gradient($grey-500 2px, transparent 2px);
 	}
+}
+
+::-moz-selection { /* Code for Firefox */
+	color: $dark;
+	background: $light ;
+}
+body.light ::-moz-selection { /* Code for Firefox */
+	color: $light;
+	background: $dark ;
+}
+body.light a ::-moz-selection {
+	color: inherit;
+}
+// body.light h1 ::-moz-selection {
+// 	color: white;
+// }
+
+::selection {
+	color: $dark;
+	background: $light ;
+}
+
+body.light ::selection { /* Code for Firefox */
+	color: $light;
+	background: $dark ;
+}
+body.light a ::selection {
+	color: inherit;
+}
+
+body.light #holo::selection    {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: #f280fc;
+	background-blend-mode: normal;
 	
 }
 
@@ -49,8 +100,6 @@ a {
 		color: $dark;
 	}
 }
-
-
 .ml-auto{
 	margin-left: auto;
 }
@@ -64,7 +113,6 @@ a {
 .text-left{
 	text-align: left;
 }
-
 .relative {
 	position: relative;
 }
@@ -75,30 +123,41 @@ a {
 	// padding: 0 24px;
 	padding: 0 5%;
 }
+.stack > * + * {
+	margin-block-start: 1.5rem;
+}
+.feather {
+	height: 1em;
+	width: 1em;
+}
 
 // BUTTONS
 
 .btn {
-	background-color: #1a1a1a;
-	border: 2px solid #1a1a1a;
+	background-color: $dark;
+	border: 2px solid $dark;
 	color: white;
-	display: inline-block;
-	padding: .25rem .75rem;
+	display: flex;
+    align-items: center;
+	padding: .25rem 1rem;
 	border-radius: .75rem;
 	text-decoration: none;
-	transition: .3s ease;
+	transition: .2s ease;
 	font-weight: 700;
+	max-width: fit-content;
 	&:hover {
-		color: black;
-		background-color: #333333;
+		color: $dark;
+		background-color: $grey-800;
+		border-color: $grey-800;
 	}
 	&-primary {
 		color: white;
 		border-color: $grey-800;
 		background-color: $grey-800;
 		&:hover {
-			background-color: rgba(0,0,0 ,.8);
-			color: white;
+			background-color: $grey-300;
+			color: $grey-800;
+			border-color: $grey-300;
 		}
 	}
 	&-expand::after {
@@ -108,6 +167,13 @@ a {
 		right: 0;
 		left: 0;
 		bottom: 0;
+	}
+	&-md {
+		font-size: 1.25rem;
+		padding: 0.75rem 1.5rem;
+	}
+	& > .feather {
+		margin-left: .5em;
 	}
 	body.light & {
 		border-color: $grey-300;
@@ -128,13 +194,16 @@ main {
 }
 
 // HEADER
+
 header {
 	position: fixed;
 	width: 100%;
 	z-index: 1;
-	background-color: $dark;
+	background-color: rgba($dark, $alpha: 0.5);
+	backdrop-filter: blur(8px);
 	body.light & {
-		background-color: $light;
+		background-color: rgba($light, $alpha: 0.5);
+		backdrop-filter: blur(8px);
 	}
 }
 nav {
@@ -142,7 +211,7 @@ nav {
 	display: flex;
 	// height: 6rem;
 	justify-content: space-between;
-	padding: .5rem 0;
+	padding: 1rem 0;
 	z-index: 1;
 	.logo {
 		height: 3rem;
@@ -153,7 +222,12 @@ nav {
 	}
 	.switch{
 		order: 2;
-		width: 40px;
+		width: 3rem;
+		height: 3rem;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 	.toggle {
 		order: 3
@@ -172,6 +246,7 @@ nav {
 		}
 	}
 }
+
 .nav-menu {
 	position: absolute;
 	height: calc(100vh - 6rem);
@@ -184,12 +259,17 @@ nav {
 	bottom: 0;
 	transition: .4s ease;
 	z-index: -1;
+	gap: .5rem;
 	
 	&.active {
 		top: 6rem;
 		background-color: $dark;
 		body.light & {
 			background-color: $light;
+		}
+		@include media(sm) {
+			top: 0;
+			gap: 1rem;
 		}
 	}
 	.nav-link {
@@ -200,15 +280,16 @@ nav {
 			text-decoration: none;
 			transition: .3s ease;
 			color: $grey-300;
-			font-weight: 600;
+			font-weight: 700;
 			padding: .75rem 1rem;
 			border-radius: .5rem;
+			display: inline-block;
 			&:hover {
 				color: #fff;
-				background-color: $grey-600;
+				background-color: $grey-800;
 			}
 			body.light & {
-				color: $grey-600;
+				color: $grey-800;
 				&:hover {
 					color: $dark;
 					background-color: $grey-300;
@@ -235,7 +316,6 @@ nav {
 
 	@include media(md) {
 		margin-left: auto;
-		color:red
 	}
 }
 
@@ -249,18 +329,23 @@ nav {
 	@include media(sm) {
 		display: none;
 	}
+	body.light & {
+		color: $dark;
+	}
 }
 
 .switch {
+	color: white;
 	background-color: transparent;
 	border: none;
 	text-align: center;
-	&::after {
-		content: '☀️';
-		
+	font-size: 1.25rem;
+	display: flex;
+	&:hover  {
+		color: #ffaa00;
 	}
-	&.active::after {
-		content: '🌒';
+	&.active {
+		color: #ffaa00;
 	}
 }
 
@@ -270,11 +355,17 @@ nav {
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
+	padding-top: 3.5rem;
 	h1 {
-		font-size: 2rem;
-		color: $grey-500;
-		@include media(sm) {
-			font-size: 2.5rem;
+		font-size: 9vw;
+		line-height: 9vw;
+		body.light & {
+			color: $dark;
+		}
+		
+		@include media(sm){
+			font-size: clamp(2.5rem, 4vw, 3.5rem);
+			line-height: clamp(2.5rem, 4vw, 3.5rem);
 		}
 	}
 	@include media(sm) {
@@ -283,23 +374,30 @@ nav {
 		}
 	}
 	.subtitle {
-		font-size: 2rem;
-		line-height: 2.5rem;
+		font-size: 9vw;
+		line-height: 9vw;
 		margin-bottom: 2rem;
-		font-weight: 600;
-		@include media(sm) {
-			font-size: 2.5rem;
+		font-weight: 700;
+		color: $grey-500;
+		body.light &{
+			color: $grey-800;
+		}
+		@include media(sm){
+			font-size: clamp(2.5rem, 4vw, 3.5rem);
+			line-height: clamp(2.5rem, 4vw, 3.5rem);
 		}
 	}
 	.cta {
-		font-size: 1.25rem;
-		font-weight: 600;
-		margin-bottom: 1rem;
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-bottom: 2rem;
 	}
-	.btn-primary {
+	body.light & .btn-primary {
+		background-color: $dark;
+		border: $dark;
+		color: white;
 		&:hover{
-			background-color: white;
-			color: #1a1a1a;
+			background: $grey-600;
 		}
 	}
 }
@@ -314,6 +412,7 @@ nav {
 	}
 	p {
 		font-size: 1.25rem;
+		max-width: 60ch;
 		@include media(sm) {
 			font-size: 1.5rem;
 		}
@@ -335,7 +434,7 @@ nav {
 		@include media(sm) {
 			grid-template-columns: 1fr 1fr;
 		}
-		@include media(md) {
+		@include media(lg) {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 		.more {
@@ -343,10 +442,12 @@ nav {
 			align-items: center;
 			justify-content: center;
 			grid-column: 1;
+			margin-top: 2rem;
 			@include media(sm) {
 				grid-column: span 2;
+
 			}
-			@include media(md) {
+			@include media(lg) {
 				grid-column: span 3;
 			}
 		}
@@ -354,7 +455,6 @@ nav {
 	.title {
 		margin-bottom: 2rem;
 	}
-
 }
 .grid-2 {
 	display: grid;
@@ -364,6 +464,36 @@ nav {
 .project {
 	position: relative;
 	display: grid;
+	grid-template-rows: 20rem 1fr auto;
+	cursor: pointer;
+	&:hover img{
+		transform: scale(1.02);
+		transition: .2s ease-in-out;
+	}
+	.info {
+		width: 100%;
+		text-decoration: none;
+		&-expand::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+		}
+	}
+	.tag {
+		background-color: $grey-300;
+		color: $dark;
+		font-weight: 700;
+		padding: .2rem .75rem;
+		font-size: .8rem;
+		border-radius: 2rem;
+		display: inline-block;
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+	}
 	img {
 		height: 20rem;
 		width: 100%;
@@ -371,6 +501,7 @@ nav {
 		object-position: top;
 		border-radius: 1rem;
 	}
+	
 	h3 {
 		line-height: 1.2;
 	}
@@ -383,11 +514,15 @@ nav {
 	align-items: center;
 	h2 {
 		margin-bottom: 2rem;
+		color: $grey-600;
+		@include media(sm) {
+			font-size: 2.5rem
+		}
 	}
 	.service {
-		background-color: #1a1a1a;
+		// background-color: rgba($dark, $alpha: 0.5);
+		// backdrop-filter: blur(8px);
 		border-radius: 1rem;
-		padding: 3rem 2rem;
 		line-height: 1.5rem;
 		
 		body.light & {
@@ -403,7 +538,7 @@ nav {
 
 	.grid {
 		display: grid;
-		gap: 1.5rem;
+		gap: 3.5rem;
 
 		@include media(sm) {
 			grid-template-columns: 1fr 1fr;
@@ -440,10 +575,18 @@ nav {
 	.project-intro {
 		padding: 3rem 0;
 		font-size: 1.5rem;
-		font-weight: 600;
+		font-weight: 400;
 		h2 {
 			margin-top: 2rem;
 		}
+	}
+	.fullpage-img {
+		max-width: 80%;
+		margin: 2rem auto;
+	}
+	.rounded-img {
+		border-radius: 2rem;
+		margin: 3rem 0;
 	}
 	.prototype {
 		text-align: center;
@@ -466,6 +609,7 @@ nav {
 	}
 	p {
 		font-size: 1rem;
+		max-width: 60ch;
 		@include media(sm){
 			font-size: 1.5rem;
 		}
@@ -477,8 +621,14 @@ nav {
 	.list-flex {
 		display: flex;
 		flex-wrap: wrap;
-		li {
-			padding-right: 1rem;
+		gap: .75rem;
+	}
+	.list-item{
+		padding: .5rem 1rem;
+		background-color: $grey-800;
+		border-radius: 2rem;
+		body.light & {
+			background-color: $grey-300;
 		}
 	}
 	.skills {
@@ -499,22 +649,33 @@ nav {
 }
 
 footer {
-	padding: 4rem 0;
-	border-top: 1px solid white;
-	min-height: 20rem;
+	padding: 3rem 0 2rem 0;
+	background-color: rgba($dark, $alpha: 0.5);
 	display: flex;
 	align-items: center;
-
+	body.light &{
+		background-color: rgba($dark, $alpha: 0.1);
+	}
 	h2 {
 		font-size: 2rem;
+		color: $grey-600;
 	}
 
 	.grid {
 		display: grid;
 		align-items: center;
 		@include media(sm) {
-			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-columns: 2fr 1fr;
 		}
+	}
+	.social {
+		display: flex;
+		font-size: 1.5rem;
+    	gap: 0.75rem;
+		justify-content: flex-end;
+	}
+	.mail {
+		font-size: 1.25rem;
 	}
 }
 
@@ -544,6 +705,158 @@ footer {
 		text-decoration: underline;
 	}
 }
+
+.text-fill {
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	// animation: hue 5s infinite alternate ;
+}
+
+// rgb(194, 255, 182)
+
+// #holo {
+// 	display: inline-block;
+// 	position: relative;
+// 	background-image: linear-gradient(
+// 	  to right,
+// 	  rgb(194, 255, 182),
+//     rgb(255, 163, 182),
+//     rgb(221, 169, 255),
+//     rgb(162, 209, 255),
+// 	rgb(194, 255, 182)
+// 	);
+// 	background-size: 200%;
+// }
+
+.holo {
+	display: inline-block;
+	position: relative;
+	background-image: linear-gradient(
+	  to right,
+	  rgb(194, 255, 182),
+    rgb(255, 163, 182),
+    rgb(221, 169, 255),
+    rgb(162, 209, 255),
+	rgb(194, 255, 182)
+	);
+	background-size: 200%;
+
+}
+.color-test {
+	color:#c2ffb6;
+}
+
+
+.icon-holo {
+	// background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    // background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+#gradient-horizontal {
+	--color-stop-1: #a770ef;
+	--color-stop-2: #cf8bf3;
+	--color-stop-3: #fdb99b;
+  }
+ #gradient-vertical {
+	--color-stop-1: #00c3ff;
+	--color-stop-2: #77e190;
+	--color-stop-3: #ffff1c;
+ }
+
+ .icon-hgradient:hover {
+	// fill: url(#gradient-horizontal) gray;
+	/* We could use it as a stroke fill too: */
+	stroke: url(#gradient-horizontal) gray;
+}
+.icon-vgradient:hover {
+	stroke: url(#gradient-vertical) gray;
+}
+	
+
+// #holo::after{
+// 	position: absolute;
+// 	content:'';
+// 	background-image: linear-gradient(
+// 	  to right,
+// 	  rgb(194, 255, 182),
+//     rgb(255, 163, 182),
+//     rgb(221, 169, 255),
+//     rgb(162, 209, 255),
+// 	rgb(194, 255, 182)
+// 	);
+// 	background-size: 200%;
+// 	filter: blur(16px);
+// 	top: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	right: 0;
+// }
+
+body.light #holo {
+	background-image: linear-gradient(
+	  to right,
+	  rgb(194, 255, 182),
+	  rgb(255, 163, 182),
+	  rgb(221, 169, 255),
+	  rgb(162, 209, 255),
+	  rgb(194, 255, 182)
+	), linear-gradient(
+		to right,
+		rgb(194, 255, 182),
+		rgb(255, 163, 182),
+		rgb(221, 169, 255),
+		rgb(162, 209, 255),
+		rgb(194, 255, 182)
+	  );
+	background-size: 200%;
+	background-blend-mode: multiply;
+}
+
+// @keyframes hue {
+//   from {
+//     -webkit-filter: hue-rotate(0deg);
+//   }
+//   to {
+//     -webkit-filter: hue-rotate(-360deg);
+//   }
+// }
+
+
+// @keyframes hue {
+// 	0% {
+// 		background-position: 0% 50%;
+// 	}
+// 	50% {
+// 		background-position: 100% 50%;
+// 	}
+// 	100% {
+// 		background-position: 0% 50%;
+// 	}
+// }
+
+.holo2 {
+	background-image: linear-gradient(
+    to right,
+    rgb(194, 255, 182),
+    rgb(255, 163, 182),
+    rgb(221, 169, 255),
+    rgb(162, 209, 255)
+  );
+}
+
+.holo3 {
+	background-image: linear-gradient(
+    to right,
+    rgb(255, 248, 182),
+	rgb(255, 163, 182),
+	rgb(221, 169, 255),
+	rgb(162, 209, 255)
+  );
+}
+
+
 
 .transition-fade {
 	transition: 0.5s;

@@ -3,12 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Hospital Virtual Duoc UC - Arturo Jofré - Experiencia de usuario, diseño y desarrollo web.</title>
-	<meta name="description" content="Experiencia de usuario, diseño de interfaces y Desarrollo Web, Front End Designer & Developer.">
-	<meta name="keywords" content="experiencia de usuario, arquitectura de informacion, diseño de interfaz, mobile design, diseño movil, responsive design, user experience, user interface, usability, usabilidad web, diseño de interaccion, diseño gráfico, graphic design, HTML, CSS, HTML5, CSS3, jquery, digital art director, web design, diseño web, director de arte digital, UX, UI, front end design">
+	<title>Hospital Virtual Duoc UC Arturo Jofré - Product Designer, UX, UI, developer en Santiago de Chile</title>
+	<meta name="author" content="Arturo Jofré">
+  	<meta name="description" content="Product Designer, UI, UX, Front End Designer &amp; Developer, en Santiago de Chile. Ayudo a empresas y startups a crear productos digitales.">
+	<meta name="keywords" content="Product Designer, UX, UI, front end developer, experiencia de usuario, arquitectura de informacion, diseño de interfaz, user experience, usability, usabilidad, diseño de interaccion, diseño gráfico, graphic design, web design, diseño web">
+  	<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
 	<meta name="theme-color" content="#292929">
+	<meta name="color-scheme" content="dark light">
 	<link rel="alternate" href="http://arturojofre.cl" hreflang="es-cl" />
-	<link rel="icon" type="image/png" href="/assets/img/favicon.svg">
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -21,7 +23,7 @@
 		gtag('config', 'UA-25357532-1');
 	</script>
 </head>
-<body>
+<body id="test">
 	<header>
 		<div class="container">
 			<nav class="navbar">
@@ -32,13 +34,12 @@
 					<li class="nav-link"><a href="/#que-hago">Qué hago</a></li>
 					<li class="nav-link"><a href="/#contacto">Contactame</a></li>
 				</ul>
-				<button class="switch" id="switch"></button>
+				<button aria-label="theme-switch" class="switch" id="switch"> <i data-feather="sun"></i></button>
 				<button class="toggle">Menu</button>
-				
 			</nav>
 		</div>
 	</header>
-   
+
 	<main id="swup" class="transition-fade single-project">
 	<div class="container">
 		<div class="project-info">
@@ -48,12 +49,12 @@
 			<p> </p>
 			<a href="https://hospitalvirtual.duoc.cl" target="_blank"> Ir al sitio</a>
 		</div>
-		<div class="project-intro">
+		<div class="project-intro stack">
 			<p>Hospital Virtual Duoc UC</p>
 <p>El proyecto nace bajo la necesidad académica de dar respuestas a la alta demanda de campo clínico, la inmediatez de la educación, la tendencia del entrenamiento en salud, y el foco de generar estrategias pedagógicas innovadoras y disruptivas que promuevan la adquisición de una serie de competencias y habilidades en nuestros estudiantes.</p>
 <p>Su objetivo es contribuir al cumplimiento del Perfil de Egreso de los estudiantes de la Escuela de Salud, por medio de la instalación de un espacio virtual que estandarice, asegure cobertura, pertinencia y la completa ejecución del programa prácticas clínicas, mejorando el aprendizaje y experiencia de los estudiantes, ya que su propósito es complementar horas de servicios clínicos críticos.</p>
 <p>El modelo se dirige a estudiantes de inicio 2020 en adelante, quienes deben aprobar esta metodología para continuar con su internado profesional. Igualmente, estudiantes de generaciones anteriores pueden utilizarla, según la situación de cada sede.</p>
-<img src="/assets/img/portafolio/hospitalvirtual-duoc.png"> 
+<img src="/assets/img/portafolio/hospitalvirtual-duocuc.png">
 		</div>
 		
 	</div>
@@ -61,30 +62,51 @@
 
 
 	<footer id="contacto">
-		<div class="container">
+		<div class="container stack">
 			<div class="grid">
 				<div>
 					<h2>¿Tienes un proyecto?</h2>
-					<h3>Conversemos</h3>
+					<h3>Conversemos </h3>
+					<a class="mail" href="mailto:hola@arturojofre.cl">hola@arturojofre.cl</a>
 				</div>
-				<div></div>
+				
 				<div>
-					<p>Arturo Jofré 2022.</p>
-					<p>UX, diseño & desarrollo.</p>
-					<a href="mailto:hola@arturojofre.cl">hola@arturojofre.cl</a>
-					
+					<ul class="social">
+						<li><a href="https://www.linkedin.com/in/arturojofre/"><i data-feather="linkedin"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/arturojofre/"><i data-feather="dribbble"></i></a></li>
+					</ul>
 				</div>
 			</div>
-			<p>Made with <a href="https://www.11ty.dev/">11ty</a>, & <3</p>
+			<div class="grid">
+				<p>Made with <a target="_blank" href="https://www.11ty.dev/">11ty</a>, & <3</p><p class="text-right">Arturo Jofré 2022.</p>
+			</div>
 		</div>
 	</footer>
+
+	<svg aria-hidden="true" focusable="false" style="width:0;height:0;position:absolute;">
+	<linearGradient id="gradient-horizontal">
+		<stop offset="0%" stop-color="var(--color-stop-1)" />
+		<stop offset="50%" stop-color="var(--color-stop-2)" />
+		<stop offset="100%" stop-color="var(--color-stop-3)" />
+	</linearGradient>
+	<linearGradient id="gradient-vertical" x2="0" y2="1">
+		<stop offset="0%" stop-color="var(--color-stop-1)" />
+		<stop offset="50%" stop-color="var(--color-stop-2)" />
+		<stop offset="100%" stop-color="var(--color-stop-3)" />
+	</linearGradient>
+	</svg>
+	
 	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 	<script src="/assets/js/SwupScrollPlugin.min.js"></script>
+	<script src="/assets/js/SwupPreloadPlugin.min.js"></script>
+	<script src="/assets/js/feather.min.js"></script>
 	<script src="/assets/js/main.js"></script>
+	
 	<script>
 		const swup = new Swup({
-		plugins: [new SwupScrollPlugin()]
+		plugins: [new SwupScrollPlugin()],
 		});
+		
 		
 		new SwupScrollPlugin({
 			doScrollingRightAway: true,
@@ -92,6 +114,8 @@
 			scrollFriction: 0.3,
 			scrollAcceleration: 0.08,
 		});
+		
+
 	</script>
 
 </body>

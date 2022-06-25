@@ -10,6 +10,7 @@ image: /assets/img/portafolio/p-base.png
 thumb: /assets/img/portafolio/thumbs/base.png
 color: "#f57423"
 tags:
+eleventyExcludeFromCollections: true
 
 ---
 

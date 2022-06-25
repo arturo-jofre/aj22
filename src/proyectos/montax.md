@@ -16,12 +16,13 @@ rol: "Diseñador UX, Front-end Developer Wordpress"
 Montax es una empresa chilena de servicios, enfocados en la venta y arriendo de andamios e insumos para la construcción y proyectos de ingeniería.
 
 
-Rediseño de su imagen
+
+### Rediseño de su imagen
 <div class="grid-2">
-<img src="/assets/img/portafolio/p-montax-logo-antes.png">
-<img src="/assets/img/portafolio/p-montax-logo-despues.png">
+<img src="/assets/img/portafolio/p-montax-logo-old.png">
+<img src="/assets/img/portafolio/p-montax-logo-new.png">
 </div>
 
-La web
+### La web
 
 <img src="/assets/img/portafolio/p-montax.png">

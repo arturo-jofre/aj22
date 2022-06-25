@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es-cl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{ title }} Arturo Jofré - Product Designer, UX, UI, developer en Santiago de Chile</title>
+	<meta name="author" content="{{ site.authorName }}">
+  	<meta name="description" content="{{ site.description }}">
+	<meta name="keywords" content="Product Designer, UX, UI, front end developer, experiencia de usuario, arquitectura de informacion, diseño de interfaz, user experience, usability, usabilidad, diseño de interaccion, diseño gráfico, graphic design, web design, diseño web">
+  	<link rel="icon" href="{{ site.favicon }}" type="image/svg+xml" />
+	<meta name="theme-color" content="#292929">
+	<meta name="color-scheme" content="dark light">
+	<link rel="alternate" href="http://arturojofre.cl" hreflang="es-cl" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25357532-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-25357532-1');
+	</script>
+</head>
+<body id="test">
+	<header>
+		<div class="container">
+			<nav class="navbar">
+				<a class="brand" href="/"><img class="logo" src="/assets/img/arturojofre_logo.svg" alt="Logo Arturo Jofré"></a>
+				<ul class="nav-menu">
+					<li class="nav-link"><a href="/proyectos">Proyectos</a></li>
+					<li class="nav-link"><a href="/sobre-mi">Sobre mi</a></li>
+					<li class="nav-link"><a href="/#que-hago">Qué hago</a></li>
+					<li class="nav-link"><a href="/#contacto">Contactame</a></li>
+				</ul>
+				<button aria-label="theme-switch" class="switch" id="switch"> <i data-feather="sun"></i></button>
+				<button class="toggle">Menu</button>
+			</nav>
+		</div>
+	</header>
+
+	{{ content | safe }}
+
+	<footer id="contacto">
+		<div class="container stack">
+			<div class="grid">
+				<div>
+					<h2>¿Tienes un proyecto?</h2>
+					<h3>Conversemos </h3>
+					<a class="mail" href="mailto:hola@arturojofre.cl">hola@arturojofre.cl</a>
+				</div>
+				
+				<div>
+					<ul class="social">
+						<li><a href="https://www.linkedin.com/in/arturojofre/"><i data-feather="linkedin"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/arturojofre/"><i data-feather="dribbble"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="grid">
+				<p>Made with <a target="_blank" href="https://www.11ty.dev/">11ty</a>, & <3</p><p class="text-right">Arturo Jofré 2022.</p>
+			</div>
+		</div>
+	</footer>
+
+	<svg aria-hidden="true" focusable="false" style="width:0;height:0;position:absolute;">
+	<linearGradient id="gradient-horizontal">
+		<stop offset="0%" stop-color="var(--color-stop-1)" />
+		<stop offset="50%" stop-color="var(--color-stop-2)" />
+		<stop offset="100%" stop-color="var(--color-stop-3)" />
+	</linearGradient>
+	<linearGradient id="gradient-vertical" x2="0" y2="1">
+		<stop offset="0%" stop-color="var(--color-stop-1)" />
+		<stop offset="50%" stop-color="var(--color-stop-2)" />
+		<stop offset="100%" stop-color="var(--color-stop-3)" />
+	</linearGradient>
+	</svg>
+	
+	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+	<script src="/assets/js/SwupScrollPlugin.min.js"></script>
+	<script src="/assets/js/SwupPreloadPlugin.min.js"></script>
+	<script src="/assets/js/feather.min.js"></script>
+	<script src="/assets/js/main.js"></script>
+	
+	<script>
+		const swup = new Swup({
+		plugins: [new SwupScrollPlugin()],
+		});
+		
+		
+		new SwupScrollPlugin({
+			doScrollingRightAway: true,
+			animateScroll: true,
+			scrollFriction: 0.3,
+			scrollAcceleration: 0.08,
+		});
+		
+
+	</script>
+
+</body>
+</html>

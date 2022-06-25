@@ -1,4 +1,8 @@
 {
 	"name": "Arturo Jofré",
-	"url": "https://www.arturojofre.cl"
+	"url": "https://www.arturojofre.cl",
+	"authorName": "Arturo Jofré",
+	"authorUrl": "https://arturojofre.cl",
+  	"description": "Product Designer, UI, UX, Front End Designer & Developer, en Santiago de Chile. Ayudo a empresas y startups a crear productos digitales.",
+  	"favicon": "/assets/img/favicon.svg"
 }

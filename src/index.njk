@@ -1,6 +1,6 @@
 ---
 layout: "base.njk"
-title: "Inicio"
+title: ""
 permalink: /
 changeFreq: daily
 ---
@@ -8,22 +8,25 @@ changeFreq: daily
 	<section class="hero">
 		<div class="container middle">
 			<div class="box">
-				<h1>Arturo Jofré López</h1>
-				<h2 class="subtitle">Diseñador Gráfico, Diplomado en Arquitectura de la información y Experiencia de usuario.</h2>
+				<h1 class="text-fill holo" id="holo">Arturo Jofré López</h1>
+				<h2 class="subtitle">Product designer, ayudo a empresas y startups a crear  interacciones, intuitivas y agradables para apps y web.</h2>
 				<h3 class="cta">¿Tienes un nuevo proyecto o quieres mejorar uno existente?</h3>
-				<a class="btn btn-primary" href="#contacto">Conversemos</a>
+				<a class="btn btn-md  btn-primary" href="#contacto">Conversemos <i data-feather="arrow-right"></i></a></a>
 			</div>
 		</div>
 	</section>
 	<section class="about">
-		<div class="container">
+		<div class="container stack">
 			<h2>Sobre mi</h2>
 			
 			<p>Me llamo Arturo Jofré López, diseñador gráfico Duoc UC, Diplomado en Arquitectura de Información y Experiencia de Usuario en Universidad Central de Chile, vivo en Santiago pero soy oriundo de Tucapel, hace más de 10 años que me dedico al diseño y al desarrollo web. Hoy me especializo en usabilidad y experiencia de usuario.</p>
-			<p>En el 2015 co-funde la agencia <a class="pavlov" href="http://www.pavlov.cl">Pávlov</a> con un par de amigos.</p>
-			<p>Actualmente trabajo en <a class="multiplica" href="https://www.multiplica.com/">Multiplica</a>, diseñando UX para software de grandes empresas.</p>
-			<a class="btn" href="/sobre-mi">Más</a>
 
+			<p>Actualmente trabajo en <a class="multiplica" href="https://www.multiplica.com/">Multiplica</a>, como diseñador UX</p>
+			
+			<p>En 2015 co-funde <a class="pavlov" href="http://www.pavlov.cl">Pávlov</a> con un par de amigos.</p>
+
+			<p>Puedes contratar mis servicios como freelance o como agencia</p>
+			<a class="btn btn-md btn-primary" href="/sobre-mi">Más</a>
 		</div>
 	</section>
 	
@@ -34,7 +37,7 @@ changeFreq: daily
 				{% set listaproyectos = collections.destacados %}
 				{% include "listaproyectos.njk" %}
 				<div class="more">
-				<a class="btn btn-primary" href="/proyectos">Ver todos</a>
+					<a class="btn btn-md btn-primary" href="/proyectos">Ver todos</a>
 				</div>
 			</div>
 		</div>
@@ -46,23 +49,24 @@ changeFreq: daily
 			<div class="grid">
 				<div class="service">
 					<h3>Experiencia de usuario UX</h3>
-					<p>La investigación, arquitectura de información, y usabilidad. Son la base para entender y empatizar con los usuarios y generar una propuesta de valor.</p>
+					<p>Escuchar, entender y empatizar es lo principal para conocer a los usuarios a traves de la investigación y definición de estrategias. Para crear soluciones con una buena arquitectura de información, usables y accesibles.</p>
 				</div>
 				
 				<div class="service">
 					<h3>Diseño de interfaces UI</h3>
-					<p>Un buen diseño de interfaces facilita de usuario completar de tareas. Lograr un balance entre los colores, diagramación, tipografia, elementos visuales y la identidad de la marca. Para conectar con los usuarios.</p>
+					<p>Una buena experiencia requiere que el diseño facilite al usuario completar de tareas. Balanceando la identidad de la marca, diseño visual y la accecibilidad.</p>
 				</div>
 				<div class="service">
 					<h3>Desarrollo web Front-end</h3>
-					<p>Convertir el diseño visual e interactivo en sitios web con las tecnologías HTML5, CSS3, Javascript, contruidas pensando en las buenas practicas, performace y SEO, principalmente en la plataforma autoadministrable CMS Wordpress.</p>
+					<p>Convertir el diseño visual e interactivo en sitios web con las tecnologías HTML5, CSS3, Javascript, considerando accesibilidad, performace y SEO.</p>
 				</div>
 				<div class="service">
-					<h3>Diseño Gráfico & Branding</h3>
-					<p>Diseño de logotipos, marca gráfica e identidad visual y consultoría para tu marca.</p>
+					<h3>Branding e identidad de marca</h3>
+					<p>Una identidad de marca no es solo un logotipo, es como se presenta visualmente una marca a las personas. Algunos de los elementos o componentes que construyen la identidad de marca como un todo; tipografía, colores, sistema iconográfico, patrones, estilo fotográfico, entre otros. </p>
 				</div>
 			</div>
 			
 		</div>
 	</section>
+
 </main>

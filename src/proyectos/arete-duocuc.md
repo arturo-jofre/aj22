@@ -11,12 +11,11 @@ rol: "UX, UI, Front-end Developer Wordpress"
 url: https://arete.duoc.cl
 tags:
   - proyectos
-  - destacados
 ---
 
 Areté, Revista de Humanidades de Duoc UC es una publicación electrónica anual, dedicada al estudio de las Humanidades. Cuyo objetivo es recibir, evaluar y publicar artículos de investigadores de cualquier institución y disciplina de las humanidades.
 
-<img src="/assets/img/portafolio/arete-duoc.png"> 
+<img class="rounded-img" src="/assets/img/portafolio/arete-duoc.png"> 
 
 ## Prototipo Mobile
 
