@@ -5,10 +5,14 @@ layout: base.njk
 	<div class="container">
 		<div class="project-info">
 			<h1>{{ title }}</h1>
-			<p>{{ year }}</p>
-			<p> {{ rol }}</p>
-			<p> {{ type }}</p>
-			<a href="{{ url }}" target="_blank"> Ir al sitio</a>
+			<div class="project-data">
+				<p>{{ year }}</p>
+				<p>{{ duration }}</p>
+				<p>{{ rol }}</p>
+				<p>{{ type }}</p>
+				<a href="{{ url }}" target="_blank"> Ir al sitio</a>
+			</div>
+			
 		</div>
 		<div class="project-intro stack">
 			{{ content | safe}}
