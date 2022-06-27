@@ -4,6 +4,7 @@ title: Nuevo Portal Clientes Autofin
 description: Autofin hasta el fin
 year: 2020
 date: 2020-09-01
+duration: 3 meses
 image: /assets/img/portafolio/autofin-portal-clientes.png
 thumb: /assets/img/portafolio/thumbs/autofin-portal-clientes.png
 color: "#efc03b"

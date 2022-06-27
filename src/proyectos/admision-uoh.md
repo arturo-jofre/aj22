@@ -3,6 +3,7 @@ layout: layouts/proyecto.njk
 title: Admision UOH 2017
 description: Admision Universidad de O`Higgings 2017
 year: 2017
+duration: 2 meses
 date: 2017-01-01
 thumb: "/assets/img/portafolio/thumbs/uoh.png"
 image: "/assets/img/portafolio/uoh.png"

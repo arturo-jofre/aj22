@@ -4,6 +4,7 @@ title: Areté Revista de Humanidades Duoc UC
 description: Admision Universidad de O`Higgings 2017
 year: 2020
 date: 2020-11-01
+duration: 1 mes
 thumb: "/assets/img/portafolio/thumbs/arete-duoc.png"
 image: "/assets/img/portafolio/arete-duoc.png"
 color: "#1A203D"

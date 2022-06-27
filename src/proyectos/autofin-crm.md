@@ -4,6 +4,7 @@ title: Autofin CRM
 description: Autofin hasta el fin
 year: 2019
 date: 2019-03-01
+duration: 1 año
 thumb: /assets/img/portafolio/thumbs/autofin-crm.png
 image: /assets/img/portafolio/autofin-crm.png
 color: "#efc03b"

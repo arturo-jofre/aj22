@@ -4,6 +4,7 @@ title: "Software de cobranzas Autofin"
 description: "Diseño de un software para la gestión y seguimiento de cobranzas para Autofin"
 year: "2019"
 date: "2019-10-01"
+duration: 1 año
 thumb: "/assets/img/portafolio/thumbs/autofin-cob.png"
 image: "/assets/img/portafolio/autofin-cob.png"
 color: "#efc03b"

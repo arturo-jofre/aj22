@@ -4,6 +4,7 @@ title: Autofin Simulador
 description: Autofin hasta el fin
 year: 2020
 date: 2020-03-01
+duration: 3 meses
 image: /assets/img/portafolio/autofin-simulador.png
 thumb: /assets/img/portafolio/autofin-simulador.png
 color: "#efc03b"

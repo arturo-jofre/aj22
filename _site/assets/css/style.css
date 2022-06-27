@@ -310,15 +310,6 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1;
-  background-color: rgba(27, 24, 24, 0.5);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
-}
-
-body.light header {
-  background-color: rgba(240, 234, 230, 0.5);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
 }
 
 nav {
@@ -333,6 +324,15 @@ nav {
           justify-content: space-between;
   padding: 1rem 0;
   z-index: 1;
+  background-color: rgba(27, 24, 24, 0.5);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+
+body.light nav {
+  background-color: rgba(240, 234, 230, 0.5);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 
 nav .logo {
@@ -390,7 +390,7 @@ nav .toggle {
 
 .nav-menu {
   position: absolute;
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 5rem);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -410,8 +410,9 @@ nav .toggle {
 }
 
 .nav-menu.active {
-  top: 6rem;
+  top: 5rem;
   background-color: #1b1818;
+  margin: -1rem 0;
 }
 
 body.light .nav-menu.active {
@@ -928,12 +929,12 @@ footer {
 }
 
 body.light footer {
-  background-color: rgba(27, 24, 24, 0.1);
+  background-color: rgba(240, 234, 230, 0.1);
 }
 
 footer h2 {
   font-size: 2rem;
-  color: #736d68;
+  color: #b9aea6;
 }
 
 footer .grid {
@@ -942,6 +943,7 @@ footer .grid {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 2rem;
 }
 
 @media (min-width: 767px) {
@@ -963,7 +965,8 @@ footer .social {
 }
 
 footer .mail {
-  font-size: 1.25rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
 }
 
 .pavlov, body.light .pavlov {
