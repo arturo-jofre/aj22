@@ -1,2 +1,1 @@
-# aj22
-# aj2021
+# Portafolio Arturo Jofré 2022
