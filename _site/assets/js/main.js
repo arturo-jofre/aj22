@@ -73,47 +73,59 @@ document.addEventListener("DOMContentLoaded", () => {
 //   handleMouseMove(event);
 // });
 
-let test = document.getElementById("test");
+// let test = document.getElementById("test");
 
-document.getElementById("test").addEventListener("mousemove", function (event) {
-  handleMouseMove(event);
-});
 
-let holographicElement = document.getElementById("holo");
 
-window.addEventListener("deviceorientation", handleDeviceOrientation, true);
 
-function updateHolographicBackground(value) {
-  const percentage = value * 200;
-  holographicElement.style.backgroundPosition = percentage + "%";
-}
-
-function handleMouseMove(event) {
-  const x = event.clientX;
-  const width = document.documentElement.clientWidth;
-  const value = x / width;
-  updateHolographicBackground(value);
-}
-
-function handleDeviceOrientation(event) {
-  const z = Math.abs(event.gamma); // rotation degrees from 0 to 360
-  const value = z / 90;
-  updateHolographicBackground(value);
-}
 
 function init() {
+  if (document.querySelector('#holo')) { //This checks if this element is on the the page (in the html)
+        new holo(); // If it is then it creates a new instance of the 'scrollers' function
+    }
+ 
   feather.replace();
+
 
   // Add more here as the project grows...
 }
 function unload() {
   feather.replace();
+ 
 }
 
-document.addEventListener("swup:pageView", function () {
+var holoStart = new holo();
+
+function holo(){
   
+  document.getElementById("test").addEventListener("mousemove", function (event) {
+    handleMouseMove(event);
+  });
+
+  let holographicElement = document.getElementById("holo");
+
+  window.addEventListener("deviceorientation", handleDeviceOrientation, true);
+
+  function updateHolographicBackground(value) {
+    const percentage = value * 200;
+    holographicElement.style.backgroundPosition = percentage + "%";
+  }
   
-});
+  function handleMouseMove(event) {
+    const x = event.clientX;
+    const width = document.documentElement.clientWidth;
+    const value = x / width;
+    updateHolographicBackground(value);
+  }
+  
+  function handleDeviceOrientation(event) {
+    const z = Math.abs(event.gamma); // rotation degrees from 0 to 360
+    const value = z / 90;
+    updateHolographicBackground(value);
+  }
+}
+
+
 
 swup = new Swup();
 swup.on("contentReplaced", init);
