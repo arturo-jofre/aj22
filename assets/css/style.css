@@ -1009,8 +1009,8 @@ footer .mail {
 .holo {
   display: inline-block;
   position: relative;
-  background-image: -webkit-gradient(linear, left top, right top, from(#c2ffb6), color-stop(#ffa3b6), color-stop(#dda9ff), color-stop(#a2d1ff), to(#c2ffb6));
-  background-image: linear-gradient(to right, #c2ffb6, #ffa3b6, #dda9ff, #a2d1ff, #c2ffb6);
+  background-image: -webkit-gradient(linear, left top, right top, from(#e6e6e6), color-stop(#c2ffb6), color-stop(#ffa3b6), color-stop(#dda9ff), color-stop(#a2d1ff), to(#e6e6e6));
+  background-image: linear-gradient(to right, #e6e6e6, #c2ffb6, #ffa3b6, #dda9ff, #a2d1ff, #e6e6e6);
   background-size: 200%;
 }
 
