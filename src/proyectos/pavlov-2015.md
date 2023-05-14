@@ -13,4 +13,5 @@ rol: Diseñador UX, Front-end Developer
 
 Pávlov es una agencia de diseño, desarrollo web y fotografía orientada al mercado gastronómico.
 
-<img src="/assets/img/portafolio/pavlov.png">
+
+![Nuevo sitio agencia Pavlov.cl 2015](/assets/img/portafolio/pavlov.png)

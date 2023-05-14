@@ -1,7 +1,8 @@
 ---
 layout: layouts/proyecto.njk
 title: Autofin CRM
-description: Autofin hasta el fin
+client: Autofin
+description: CRM a medida para Autofin
 year: 2019
 date: 2019-03-01
 duration: 1 año

@@ -1,4 +1,8 @@
 module.exports = function(eleventyConfig) {
+    eleventyConfig.addPassthroughCopy({
+        "./node_modules/lottie-web/build/player/lottie.js": "/assets/js/lottie.js"
+    });
+
     eleventyConfig.addPassthroughCopy('assets')
     return {
         passthroughtFileCopy: true,
@@ -10,4 +14,6 @@ module.exports = function(eleventyConfig) {
             includes:"_includes"
         }
     }
+    
 }
+

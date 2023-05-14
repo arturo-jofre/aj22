@@ -3,20 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sobre mi Arturo Jofré - Product Designer, UX, UI, developer en Santiago de Chile</title>
-	<meta name="author" content="Arturo Jofré">
+	<title>Sobre mi   |  Arturo Jofré, Product Designer, UX, Front-end developer en Santiago de Chile</title>
+	<meta name="author" content="Arturo Jofré López">
   	<meta name="description" content="Product Designer, UI, UX, Front End Designer &amp; Developer, en Santiago de Chile. Ayudo a empresas y startups a crear productos digitales.">
-	<meta name="keywords" content="Product Designer, UX, UI, front end developer, experiencia de usuario, arquitectura de informacion, diseño de interfaz, user experience, usability, usabilidad, diseño de interaccion, diseño gráfico, graphic design, web design, diseño web">
+	<meta name="keywords" content="Product Designer, UX, UI, front-end developer, experiencia de usuario, arquitectura de informacion, diseño de interfaz, user experience, usability, usabilidad, diseño de interaccion, diseño gráfico, graphic design, web design, diseño web">
   	<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
 	<meta name="theme-color" content="#292929">
 	<meta name="color-scheme" content="dark light">
 	<meta name="generator" content="Eleventy">
+	<meta property="og:title" content="Sobre mi" />
 	<meta http-equiv="Cache-control" content="public">
 	<link rel="alternate" href="http://arturojofre.cl" hreflang="es-cl" />
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25357532-1"></script>
+	
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
@@ -26,7 +28,8 @@
 	</script>
 </head>
 <body id="test">
-	<header>
+	<div class="wrap">
+		<header>
 		<div class="container">
 			<nav class="navbar">
 				<a class="brand" href="/"><img height="48px" width="38.8px" class="logo" src="/assets/img/arturojofre_logo.svg" alt="Logo Arturo Jofré"></a>
@@ -36,32 +39,46 @@
 					<li class="nav-link"><a href="/#que-hago">Qué hago</a></li>
 					<li class="nav-link"><a href="/#contacto">Contactame</a></li>
 				</ul>
-				<button aria-label="theme-switch" class="switch" id="switch"> <i data-feather="sun"></i></button>
+				<button aria-label="theme-switch" class="switch" id="switch">
+					<div id="darkanim" style="width: 40px; height: 40px;" class="lottie"  ></div>
+				</button>
 				<button class="toggle">Menu</button>
 			</nav>
 		</div>
 	</header>
 
 	
+	
+
+	
 <main id="swup" class="transition-fade page-about">
 	<div class="container">
-		<h1>Sobre mi </h1>
-		<p>Mi nombre es Arturo Jofré López vivo en Santiago pero soy oriundo de Tucapel, hace más de 10 años que trabajo en diseño y desarrollo web. Hoy me especializo en usabilidad y experiencia de usuario.</p>
-		<!-- <p>gobierno, salud, finanzas, logística, y recursos humanos.</p> -->
+		<section class="intro">
+			<h1>Sobre mi </h1>
+		
+		<p>Mi nombre es Arturo Jofré López vivo en Santiago pero soy oriundo de Tucapel, hace más de 12 años que trabajo en diseño gráfico y desarrollo web. Hoy me especializo Product Design en usabilidad y experiencia de usuario.</p>
+		<p>He trabajado diseñando soluciones para entidades de gobierno, startups, salud, finanzas, retail, logística, y recursos humanos.</p>
 		<p>Estudie diseño gráfico en Duoc UC, y Arquitectura de Información y Experiencia de Usuario en Universidad Central de Chile.</p>
 
-		<p>En el 2015 co-funde la agencia <a class="pavlov" href="http://www.pavlov.cl">Pávlov</a> con un par de amigos.</p>
+		<p>En el 2015 co-funde la agencia <a target="_blank" class="pavlov" href="http://www.pavlov.cl">Pávlov</a> con un par de amigos.</p>
 
-		<p>Actualmente trabajo en <a class="multiplica" href="https://www.multiplica.com/">Multiplica</a>, mejorando la	experiencia de usuario en grandes empresas.</p>
+		<p>Actualmente trabajo como diseñador UX en <a target="_blank" class="clever" href="https://www.cleveritgroup.com/">Cleverit</a>, mejorando la	experiencia de usuario en grandes empresas.</p>
 
-		<div class="skills">
+		</section>
+
+		<section class="skills">
 			<h2>Habilidades</h2>
 			<ul class="list-flex">
-				<li class="list-item">Diseño de interfaz (UI)</li>
 				<li class="list-item">Experiencia de Usuario (UX)</li>
 				<li class="list-item">Arquitectura de Información (AI)</li>
+				<li class="list-item">Diseño de interfaz (UI)</li>
 				<li class="list-item">Diseño de interacción</li>
-				<li class="list-item">Wireframes, Mockups y prototipos de mediana y alta fidelidad</li>
+				<li class="list-item">Design Thinking</li>
+				<li class="list-item">Metodologías Ágiles</li>
+				<li class="list-item">Wireframes</li>
+				<li class="list-item">Mockups</li>
+				<li class="list-item">Prototipos</li>
+				<li class="list-item">Auditoria UX</li>
 				<li class="list-item">Reportes de Usabilidad</li>
 				<li class="list-item">Desarrollo Front-End</li>
 				<li class="list-item">Diseño de apps</li>
@@ -92,12 +109,80 @@
 				<li class="list-item">Google Analytics</li>
 				<li class="list-item">Marvel App</li>
 				<li class="list-item">Invision</li>
-				<li class="list-item">Illustrator CC</li>
-				<li class="list-item">Photoshop CC</li>
+				<li class="list-item">Illustrator</li>
+				<li class="list-item">Photoshop</li>
 				<li class="list-item">VS Code</li>
 				<li class="list-item">Transmit</li>
 			</ul>
-		</div>
+		</section>
+
+		<section class="resume">
+			<h2>Resumé</h2>
+			<div class="list">
+				<div class="item">
+					<div class="duration">SEP 2022 - ACTUALIDAD</div>
+					<div class="experience">
+						<h3>Diseñador UX en <a href="https://www.cleveritgroup.com/">Cleverit </a></h3>
+						<p>Diseño de APP ecommerce y asistente de compra en tienda para Under Armour y Hush Puppies.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="duration">
+						<p>OCT 2021 - JUN 2022</p>
+					</div>
+					<div class="experience">
+						<h3>Diseñador UX en  <a href="https://www.multiplica.com/">Multiplica</a></h3>
+						<p>Research y análisis UX, moderación de cardsorting, entrevistas, testeo guerrilla y moderado, prototipado en mediana y alta fidelidad, benchmark y estudios de usabilidad, análisis de Métricas para el cliente Clínica Alemana.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="duration">
+						<p>AGO 2020 - OCT 2021</p>
+					</div>
+					<div class="experience">
+						<h3>Lead UX en <a href="https://aureolab.com/">Aureolab</a></h3>
+						<p>Liderar el equipo de diseño y facilitar la comunicación con el equipo de desarrollo en la creación productos digitales, softwares, apps y sitios web, para los clientes Autofin, Salcobrand, Regalanovios, Kidsbook, Tolivmarket, Hyla.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="duration">
+						<p>ENE 2019 - AGO 2020</p>
+					</div>
+					<div class="experience">
+						<h3>Diseñador UX en <a href="https://aureolab.com/">Aureolab</a></h3>
+						<p>Dirigir el product discovery, investigación de usuarios, experiencia de usuario y usabilidad, diseño de interfaces, para Autofin, Salcobrand, Regalanovios, Kidsbook.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="duration">
+						<p>	JUN 2017 - ENE 2019</p>
+					</div>
+					<div class="experience">
+						<h3>Diseñador UI/UX - Front-End en <a href="https://agencia.land/">Agencia Land</a></h3>
+						<p>Diseño UI, wireframes y mockups, test de usabilidad, prototipado A/B testing y desarrollo Front-End, para clientes como AFP Cuprum, Principal, Liberty Seguros, Ipchile, Ñam Santiago, CFT Manpower.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="duration">
+						<p>ENE 2012 - JUN 2015</p>
+					</div>
+					<div class="experience">
+						<h3>Diseñador Web PVW Publicidad </h3>
+						<p>Diseño y desarrollo de sitios y landings en HTML, CSS, JS, PHP, Wordpress, email marketing para el Preuniversitario Pedro de Valdivia, Colegios Pedro de Valdivia, UPV, Wall Street Institute.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="duration">
+						JUL 2011 - ENE 2012
+					</div>
+					<div class="experience">
+						<h3>Director de Arte en PVW Publicidad</h3>
+						<p>Diseño  de campañas offline y online, banners, piezas para redes sociales, comunicación interna para las empresas, Preuniversitario Pedro de Valdivia, Colegios Pedro de Valdivia, UPV, Wall Street Institute.</p>
+					</div>
+				</div>
+			</div>
+			
+		</section>
 	</div>
 
 </main>
@@ -106,40 +191,33 @@
 		<div class="container stack">
 			<div class="grid">
 				<div>
-					<h2>Escribeme</h2>
+					<h2>Escríbeme</h2>
 					<a class="mail" href="mailto:hola@arturojofre.cl">hola@arturojofre.cl</a>
 				</div>
 				
 				<div>
 					<ul class="social">
 						<li><a href="https://www.linkedin.com/in/arturojofre/"><i data-feather="linkedin"></i><span class="visible-hidden">Linkedin</span></a></li>
-						<li><a href="https://www.linkedin.com/in/arturojofre/"><i data-feather="dribbble"></i><span class="visible-hidden">Dribbble</span></a></li>
+						<li><a href="https://dribbble.com/ArturoJofre"><i data-feather="dribbble"></i><span class="visible-hidden">Dribbble</span></a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="grid">
-				<p>Made with <a target="_blank" href="https://www.11ty.dev/">11ty</a>, & <3</p><p class="text-right">Arturo Jofré 2022.</p>
+				<p>Made with <a target="_blank" href="https://www.11ty.dev/">11ty</a>, & <3</p>
+				<p class="text-right">Arturo Jofré <span id="copy"class="copyright"></span> ©.</p>
 			</div>
 		</div>
 	</footer>
+	</div>
+	<a id="back-to-top" href="#"><i data-feather="arrow-up-circle"></i></a>
 
-	<svg aria-hidden="true" focusable="false" style="width:0;height:0;position:absolute;">
-	<linearGradient id="gradient-horizontal">
-		<stop offset="0%" stop-color="var(--color-stop-1)" />
-		<stop offset="50%" stop-color="var(--color-stop-2)" />
-		<stop offset="100%" stop-color="var(--color-stop-3)" />
-	</linearGradient>
-	<linearGradient id="gradient-vertical" x2="0" y2="1">
-		<stop offset="0%" stop-color="var(--color-stop-1)" />
-		<stop offset="50%" stop-color="var(--color-stop-2)" />
-		<stop offset="100%" stop-color="var(--color-stop-3)" />
-	</linearGradient>
-	</svg>
-	
-	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+	<script src="https://unpkg.com/swup@3"></script>
 	<script src="/assets/js/SwupScrollPlugin.min.js"></script>
 	<script src="/assets/js/SwupPreloadPlugin.min.js"></script>
 	<script src="/assets/js/feather.min.js"></script>
+	<script src="/assets/js/lottie.js"></script>
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
+	
 	<script src="/assets/js/main.js"></script>
 	
 	<script>
@@ -147,15 +225,12 @@
 		plugins: [new SwupScrollPlugin()],
 		});
 		
-		
 		new SwupScrollPlugin({
 			doScrollingRightAway: true,
 			animateScroll: true,
-			scrollFriction: 0.3,
-			scrollAcceleration: 0.08,
+			scrollFriction: 0.5,
+			scrollAcceleration: 0.05,
 		});
-		
-
 	</script>
 
 </body>

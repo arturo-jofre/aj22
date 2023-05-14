@@ -1,7 +1,8 @@
 ---
 layout: layouts/proyecto.njk
 title: Areté Revista de Humanidades Duoc UC
-description: Admision Universidad de O`Higgings 2017
+Client: Duoc UC
+description: Revista de humanidades Areté DuocUC
 year: 2020
 date: 2020-11-01
 duration: 1 mes

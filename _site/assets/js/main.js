@@ -6,13 +6,7 @@ var nav = document.querySelector(".nav-menu");
 var navitem = document.querySelector(".nav-menu");
 
 // Listen for click event on toggle var
-toggle.addEventListener(
-  "click",
-  function () {
-    nav.classList.toggle("active");
-  },
-  false
-);
+
 
 navitem.addEventListener(
   "click",
@@ -21,10 +15,30 @@ navitem.addEventListener(
   },
   false
 );
+toggle.addEventListener(
+  "click",
+  function () {
+    nav.classList.toggle("active");
+  },
+  false
+);
 
-// DARKMODE -----------------
+// FOOTER COPYRIGHT
+document.getElementById("copy").innerHTML = `${new Date().getFullYear()}`;
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // run whatever we need
+
+
+  // DARKMODE -----------------
 
 var btnSwitch = document.querySelector("#switch");
+localStorage.setItem("light-mode", "false");
+
 
 btnSwitch.addEventListener("click", () => {
   document.body.classList.toggle("light");
@@ -33,65 +47,70 @@ btnSwitch.addEventListener("click", () => {
   // LocalStorage
   if (document.body.classList.contains("light")) {
     localStorage.setItem("light-mode", "true");
-  } else localStorage.setItem("light-mode", "false");
+  } 
+  else localStorage.setItem("light-mode", "false");
 });
 if (localStorage.getItem("light-mode") === "true") {
   document.body.classList.add("light");
   btnSwitch.classList.add("active");
-} else {
+} 
+else {
   document.body.classList.remove("light");
   btnSwitch.classList.remove("active");
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  // run whatever we need
+
+var animatio = bodymovin.loadAnimation({
+  container: document.getElementById('darkanim'),
+  renderer:'svg',
+  loop:false,
+  autoplay:false,
+  path:'/assets/img/lottie/sun-moon-2.json',
+  
 });
+animatio.setSpeed(8);
+animatio.play();
+// var dark = 0;
 
-// Transition
-
-// function init(){
-// 	feather.replace()
-//   if (document.querySelector('#holo')) {
-//     // something like new Carousel('#carousel')
-// }
-// 	// Add more here as the project grows...
-// }
-// function unload(){
-// 	feather.unload();
-// }
-
-// swup = new Swup();
-// swup.on("contentReplaced", init);
-// swup.on("willReplaceContent", unload);
-// init();
-
-// HOLO
-
-// onmousemove="handleMouseMove(event)"
-
-// document.getElementById("test").addEventListener("mousemove", function(event) {
-//   handleMouseMove(event);
-// });
-
-// let test = document.getElementById("test");
+btnSwitch.addEventListener('click',function(){
+    if(localStorage.getItem("light-mode") === "false"){
+        animatio.play();
+        animatio.setDirection(1);
+        document.getElementById('test').style.animation = "back .75s 1 forwards";
+    }
+    else{
+        animatio.play();
+        animatio.setDirection(-1);
+        document.getElementById('test').style.animation = "back .75s 1 forwards reverse";
+  
+    }
+  })
 
 
-
-
+});
 
 function init() {
   if (document.querySelector('#holo')) { //This checks if this element is on the the page (in the html)
         new holo(); // If it is then it creates a new instance of the 'scrollers' function
     }
- 
+
   feather.replace();
 
+  // LottieInteractivity.create({
+  //   Setspeed: 2,
+	// 	player:'#sun-moon',
+	// 	mode:"cursor",
+	// 	actions: [
+	// 		{
+	// 			type: "toggle",
+	// 		}
+	// 	]
+	// });
 
   // Add more here as the project grows...
 }
 function unload() {
   feather.replace();
- 
 }
 
 var holoStart = new holo();
@@ -124,8 +143,6 @@ function holo(){
     updateHolographicBackground(value);
   }
 }
-
-
 
 swup = new Swup();
 swup.on("contentReplaced", init);

@@ -3,18 +3,38 @@ layout: base.njk
 ---
 <main id="swup" class="transition-fade single-project">
 	<div class="container">
+		<a class="back" href="/proyectos"><i data-feather="arrow-left"></i> Volver a proyetos </a>
 		<div class="project-info">
 			<h1>{{ title }}</h1>
 			<div class="project-data">
-				<p>{{ year }}</p>
-				<p>{{ duration }}</p>
-				<p>{{ rol }}</p>
-				<p>{{ type }}</p>
-				<a href="{{ url }}" target="_blank"> Ir al sitio</a>
+				<div class="data">
+					<h4>Cliente</h4>
+					<p>{{ client }}</p>
+				</div>
+				<div class="data">
+					<h4>Año</h4>
+					<p>{{ year }}</p>
+				</div>
+				<div class="data">
+					<h4>Duración</h4>
+					<p>{{ duration }}</p>
+				</div>
+				<div class="data">
+					<h4>Rol</h4>
+					<p>{{ rol }}</p>
+				</div>
+				<div class="data">
+					<h4>Tipo</h4>
+					<p>{{ type }}</p>
+				</div>
+				<div class="data">
+					<h4>Link</h4>
+					<a class="visit" href="{{ url }}" target="_blank"> Visitar <i data-feather="arrow-up-right"></i></a>
+				</div>
 			</div>
 			
 		</div>
-		<div class="project-intro stack">
+		<div class="project-content stack">
 			{{ content | safe}}
 		</div>
 		{# <img src="{{ image }}" alt=""> #}

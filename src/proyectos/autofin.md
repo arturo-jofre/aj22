@@ -14,11 +14,11 @@ rol: Diseñador UX
 team: Aureolab
 tags:
   - proyectos
-  - destacados
 
 ---
-Autofin es empresa dedicada al financiamiento automotriz.
 
-De 60.000 visitas a 120.000
+Autofin es una empresa dedicada al financiamiento automotriz que otorga créditos para financiar la compra de vehículos nuevos, usados, de uso particular o comercial.
+
+Tras el rediseño las visitas pasaron de 60.000 visitas a 120.000 mensuales promedio.
 
 <img src="/assets/img/portafolio/autofin-web.png">

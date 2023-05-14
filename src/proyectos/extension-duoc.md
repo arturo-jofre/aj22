@@ -11,6 +11,7 @@ color: "#ffba33"
 rol: Diseñador UX, Front-end Developer Wordpress
 ---
 
-Duoc UC es un centro de Educación Superior Técnico Profesional chileno. Con más de 50 años de historia cuenta con 9 escuelas y más de 70 carreras, 18 sedes de la Región Metropolitana, Valparaíso, Biobío, La Araucanía y Los Lagos.
+<div class="intro">
+Duoc UC es un centro de Educación Superior Técnico Profesional chileno. Con más de 50 años de historia cuenta con 9 escuelas y más de 70 carreras, 18 sedes de la Región Metropolitana, Valparaíso, Biobío, La Araucanía y Los Lagos.</div>
 
 <img src="/assets/img/portafolio/p-extension-duoc.png"> 

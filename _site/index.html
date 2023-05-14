@@ -3,20 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> Arturo Jofré - Product Designer, UX, UI, developer en Santiago de Chile</title>
-	<meta name="author" content="Arturo Jofré">
+	<title>  Arturo Jofré, Product Designer, UX, Front-end developer en Santiago de Chile</title>
+	<meta name="author" content="Arturo Jofré López">
   	<meta name="description" content="Product Designer, UI, UX, Front End Designer &amp; Developer, en Santiago de Chile. Ayudo a empresas y startups a crear productos digitales.">
-	<meta name="keywords" content="Product Designer, UX, UI, front end developer, experiencia de usuario, arquitectura de informacion, diseño de interfaz, user experience, usability, usabilidad, diseño de interaccion, diseño gráfico, graphic design, web design, diseño web">
+	<meta name="keywords" content="Product Designer, UX, UI, front-end developer, experiencia de usuario, arquitectura de informacion, diseño de interfaz, user experience, usability, usabilidad, diseño de interaccion, diseño gráfico, graphic design, web design, diseño web">
   	<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
 	<meta name="theme-color" content="#292929">
 	<meta name="color-scheme" content="dark light">
 	<meta name="generator" content="Eleventy">
+	<meta property="og:title" content="" />
 	<meta http-equiv="Cache-control" content="public">
 	<link rel="alternate" href="http://arturojofre.cl" hreflang="es-cl" />
 	<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-25357532-1"></script>
+	
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
@@ -26,7 +28,8 @@
 	</script>
 </head>
 <body id="test">
-	<header>
+	<div class="wrap">
+		<header>
 		<div class="container">
 			<nav class="navbar">
 				<a class="brand" href="/"><img height="48px" width="38.8px" class="logo" src="/assets/img/arturojofre_logo.svg" alt="Logo Arturo Jofré"></a>
@@ -36,11 +39,16 @@
 					<li class="nav-link"><a href="/#que-hago">Qué hago</a></li>
 					<li class="nav-link"><a href="/#contacto">Contactame</a></li>
 				</ul>
-				<button aria-label="theme-switch" class="switch" id="switch"> <i data-feather="sun"></i></button>
+				<button aria-label="theme-switch" class="switch" id="switch">
+					<div id="darkanim" style="width: 40px; height: 40px;" class="lottie"  ></div>
+				</button>
 				<button class="toggle">Menu</button>
 			</nav>
 		</div>
 	</header>
+
+	
+	
 
 	<main id="swup" class="transition-fade">
 	<section class="hero">
@@ -53,17 +61,16 @@
 			</div>
 		</div>
 	</section>
+
 	<section class="about">
 		<div class="container stack">
 			<h2>Sobre mi</h2>
 			
-			<p>Me llamo Arturo Jofré López, diseñador gráfico Duoc UC, Diplomado en Arquitectura de Información y Experiencia de Usuario en Universidad Central de Chile, vivo en Santiago pero soy oriundo de Tucapel, hace más de 10 años que me dedico al diseño y al desarrollo web. Hoy me especializo en usabilidad y experiencia de usuario.</p>
+			<p>Hola, mi nombre es Arturo Jofré López y me dedico al diseño de productos. Resido en Santiago de Chile, aunque soy originario de Tucapel. Durante los últimos 12 años me especializado en diseño y desarrollo web, y actualmente me enfoco en el diseño de productos digitales para empresas y startups, desde el diseño de sitios y landing pages hasta aplicaciones móviles.</p>
+	
+			<p>En 2015 co-funde <a target="_blank" class="pavlov" href="http://www.pavlov.cl">Pávlov</a> con un par de amigos.</p>
 
-			<p>Actualmente trabajo en <a class="multiplica" href="https://www.multiplica.com/">Multiplica</a>, como diseñador UX</p>
-			
-			<p>En 2015 co-funde <a class="pavlov" href="http://www.pavlov.cl">Pávlov</a> con un par de amigos.</p>
-
-			<p>Puedes contratar mis servicios como freelance o como agencia</p>
+			<p>Puedes contactarme <a href="mailto:hola@arturojofre.cl">aquí</a> o en <a target="_blank" href="https://www.pavlov.cl">Pávlov.</a></p>
 			<a class="btn btn-md btn-primary" href="/sobre-mi">Más acerca de mi</a>
 		</div>
 	</section>
@@ -71,12 +78,26 @@
 	<section class="portafolio">
 		<div class="container">
 			<h2>Proyectos destacados</h2>
-			<div class="grid">
+			<div class="grid-2">
 				
 				
 	
 
-	<article class="project">
+	<article class="project-card">
+		<img loading="lazy" src="/assets/img/portafolio/thumbs/ua-app-thumb.png" alt="Nueva experiencia digital de compra en tienda para Under Armour">
+		
+		<a class="info info-expand" href="/proyectos/underarmour/">
+			<h3>Nueva experiencia digital de compra en tienda para Under Armour</h3>
+			<p>2022</p>
+		</a>
+		
+	
+		
+	</article>
+
+	
+
+	<article class="project-card">
 		<img loading="lazy" src="/assets/img/portafolio/thumbs/extension-duoc-21.png" alt="Extensión Duoc UC 2021">
 		
 		<a class="info info-expand" href="/proyectos/extension-duoc-2021/">
@@ -90,7 +111,7 @@
 
 	
 
-	<article class="project">
+	<article class="project-card">
 		<img loading="lazy" src="/assets/img/portafolio/thumbs/tolivmarket.png" alt="Tolivmarket">
 		
 		<a class="info info-expand" href="/proyectos/tolivmarket/">
@@ -104,54 +125,12 @@
 
 	
 
-	<article class="project">
-		<img loading="lazy" src="/assets/img/portafolio/thumbs/toliv.png" alt="Rediseño de la plataforma de eventos Toliv.io">
-		
-		<a class="info info-expand" href="/proyectos/toliv/">
-			<h3>Rediseño de la plataforma de eventos Toliv.io</h3>
-			<p>2020</p>
-		</a>
-		
-	
-		
-	</article>
-
-	
-
-	<article class="project">
-		<img loading="lazy" src="/assets/img/portafolio/kidsbook.png" alt="Nueva App Kidsbook">
+	<article class="project-card">
+		<img loading="lazy" src="/assets/img/portafolio/kidsbook.png" alt="Nueva App apoderados Kidsbook">
 		
 		<a class="info info-expand" href="/proyectos/kidsbook/">
-			<h3>Nueva App Kidsbook</h3>
+			<h3>Nueva App apoderados Kidsbook</h3>
 			<p>2020</p>
-		</a>
-		
-	
-		
-	</article>
-
-	
-
-	<article class="project">
-		<img loading="lazy" src="/assets/img/portafolio/thumbs/regalanovios.png" alt="Una nueva nueva forma de regalar para Regalanovios">
-		
-		<a class="info info-expand" href="/proyectos/regalanovios/">
-			<h3>Una nueva nueva forma de regalar para Regalanovios</h3>
-			<p>2019</p>
-		</a>
-		
-	
-		
-	</article>
-
-	
-
-	<article class="project">
-		<img loading="lazy" src="/assets/img/portafolio/thumbs/autofin-web.png" alt="Rediseño del sitio corpotativo de Autofin">
-		
-		<a class="info info-expand" href="/proyectos/autofin/">
-			<h3>Rediseño del sitio corpotativo de Autofin</h3>
-			<p>2019</p>
 		</a>
 		
 	
@@ -174,21 +153,20 @@
 					<h3>Experiencia de usuario UX</h3>
 					<p>Escuchar, entender y empatizar es lo principal para conocer a los usuarios a traves de la investigación y definición de estrategias. Para crear soluciones con una buena arquitectura de información, usables y accesibles.</p>
 				</div>
-				
 				<div class="service">
-					<h3>Diseño de interfaces UI</h3>
-					<p>Una buena experiencia requiere que el diseño facilite al usuario completar de tareas. Balanceando la identidad de la marca, diseño visual y la accecibilidad.</p>
+					<h3>Diseño UI</h3>
+					<p>Diseño de interfaces web y mobile apps, Una buena experiencia requiere que el diseño facilite al usuario completar de tareas. Balanceando la identidad de la marca, diseño visual y la accesibilidad.</p>
 				</div>
 				<div class="service">
 					<h3>Desarrollo web Front-end</h3>
-					<p>Convertir el diseño visual e interactivo en sitios web con las tecnologías HTML5, CSS3, Javascript, considerando accesibilidad, performace y SEO.</p>
+					<p>Convertir el diseño visual e interactivo en sitios web con las tecnologías HTML5, CSS3, Javascript, considerando accesibilidad, performance y SEO.</p>
+					<p>Diseño y programo sitios web y landing pages que se adapte a tus necesidades y que te ayude a destacar en línea con una buena experiencia de usuario, diseño intuitivo y fácil de usar, optimizado para SEO. Ademas que sea sencillo de administrar y mantener actualizado.</p>
 				</div>
 				<div class="service">
 					<h3>Branding e identidad de marca</h3>
-					<p>Una identidad de marca no es solo un logotipo, es como se presenta visualmente una marca a las personas. Algunos de los elementos o componentes que construyen la identidad de marca como un todo; tipografía, colores, sistema iconográfico, patrones, estilo fotográfico, entre otros. </p>
+					<p>Me enfoco en crear una identidad visual y de voz única para tu negocio. A través del diseño de un logotipo memorable, la definición de una paleta de colores coherente y la creación de una voz y tono que conecten con tu audiencia.</p>
 				</div>
 			</div>
-			
 		</div>
 	</section>
 
@@ -198,40 +176,33 @@
 		<div class="container stack">
 			<div class="grid">
 				<div>
-					<h2>Escribeme</h2>
+					<h2>Escríbeme</h2>
 					<a class="mail" href="mailto:hola@arturojofre.cl">hola@arturojofre.cl</a>
 				</div>
 				
 				<div>
 					<ul class="social">
 						<li><a href="https://www.linkedin.com/in/arturojofre/"><i data-feather="linkedin"></i><span class="visible-hidden">Linkedin</span></a></li>
-						<li><a href="https://www.linkedin.com/in/arturojofre/"><i data-feather="dribbble"></i><span class="visible-hidden">Dribbble</span></a></li>
+						<li><a href="https://dribbble.com/ArturoJofre"><i data-feather="dribbble"></i><span class="visible-hidden">Dribbble</span></a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="grid">
-				<p>Made with <a target="_blank" href="https://www.11ty.dev/">11ty</a>, & <3</p><p class="text-right">Arturo Jofré 2022.</p>
+				<p>Made with <a target="_blank" href="https://www.11ty.dev/">11ty</a>, & <3</p>
+				<p class="text-right">Arturo Jofré <span id="copy"class="copyright"></span> ©.</p>
 			</div>
 		</div>
 	</footer>
+	</div>
+	<a id="back-to-top" href="#"><i data-feather="arrow-up-circle"></i></a>
 
-	<svg aria-hidden="true" focusable="false" style="width:0;height:0;position:absolute;">
-	<linearGradient id="gradient-horizontal">
-		<stop offset="0%" stop-color="var(--color-stop-1)" />
-		<stop offset="50%" stop-color="var(--color-stop-2)" />
-		<stop offset="100%" stop-color="var(--color-stop-3)" />
-	</linearGradient>
-	<linearGradient id="gradient-vertical" x2="0" y2="1">
-		<stop offset="0%" stop-color="var(--color-stop-1)" />
-		<stop offset="50%" stop-color="var(--color-stop-2)" />
-		<stop offset="100%" stop-color="var(--color-stop-3)" />
-	</linearGradient>
-	</svg>
-	
-	<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+	<script src="https://unpkg.com/swup@3"></script>
 	<script src="/assets/js/SwupScrollPlugin.min.js"></script>
 	<script src="/assets/js/SwupPreloadPlugin.min.js"></script>
 	<script src="/assets/js/feather.min.js"></script>
+	<script src="/assets/js/lottie.js"></script>
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@1/dist/lottie-player.js"></script>
+	
 	<script src="/assets/js/main.js"></script>
 	
 	<script>
@@ -239,15 +210,12 @@
 		plugins: [new SwupScrollPlugin()],
 		});
 		
-		
 		new SwupScrollPlugin({
 			doScrollingRightAway: true,
 			animateScroll: true,
-			scrollFriction: 0.3,
-			scrollAcceleration: 0.08,
+			scrollFriction: 0.5,
+			scrollAcceleration: 0.05,
 		});
-		
-
 	</script>
 
 </body>

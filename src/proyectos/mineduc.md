@@ -11,6 +11,13 @@ color: "#4890E2"
 rol: "Diseñador UX, Desarrollador Wordpress"
 ---
 
+<div class="bento-box bento-1">
+  <img class="bento bento-a" src="/assets/img/portafolio/p-mineduc.png" alt="Diseño de Toliv market página de inicio" loading="lazy">
+</div>
+
+<div class="intro">
 El Consejo es una instancia asesora del Ministerio de Educación que tiene por objeto proponer orientaciones a la política pública en el área de la Formación Técnico-Profesional.
+</div>
+
 
 <img src="/assets/img/portafolio/p-mineduc.png">

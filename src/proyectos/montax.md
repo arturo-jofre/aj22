@@ -1,6 +1,6 @@
 ---
 layout: "layouts/proyecto.njk"
-title: "Montax"
+title: "Nueva imagen y sitio para Montax"
 client: Montax
 url: https://www.montax.cl
 description: "Proyecto Montax"
@@ -15,14 +15,18 @@ rol: "Diseñador UX, Front-end Developer Wordpress"
 
 Montax es una empresa chilena de servicios, enfocados en la venta y arriendo de andamios e insumos para la construcción y proyectos de ingeniería.
 
+## Problema
 
+Su sitio no tenía versión movil y no estaba optimizado para SEO.
 
 ### Rediseño de su imagen
-<div class="grid-2">
-<img src="/assets/img/portafolio/p-montax-logo-old.png">
-<img src="/assets/img/portafolio/p-montax-logo-new.png">
+
+<div class="bento-box bento-3s">
+	<img class="bento bento-a" src="/assets/img/portafolio/p-old-logo-montax.png" alt="Logo Antiguo Montax" loading="lazy">
+	<img class="bento bento-b" src="/assets/img/portafolio/p-old-logo-montax-vertical.png" alt="Logo Antiguo Montax" loading="lazy">
+	<img class="bento bento-c" src="/assets/img/portafolio/p-nuevo-logo-montax.png" alt="Logo Nuevo Montax" loading="lazy">
 </div>
 
 ### La web
 
-<img src="/assets/img/portafolio/p-montax.png">
+![Nuevo sitio Montax 2017](/assets/img/portafolio/p-montax.png)

@@ -11,10 +11,13 @@ thumb: /assets/img/portafolio/thumbs/toliv.png
 color: "#f57423"
 tags:
   - proyectos
-  - destacados
 
 ---
 
+<div class="intro">
 TOLIV es el primer market place de eventos, herramienta que permiteque productores, colectivos, bandas y artistas creen comunidades y moneticen sus eventos virtuales. Posee más de 10.000 eventos recolectados en su base de datos a lo largo de todo el país. Conectan de manera eficiente a los usuarios con sus eventos preferidos a través de algoritmos inteligentes, por lo tanto, cada usuario puede acceder a los eventos que más le gusten en muy poco tiempo. Toliv está disponible en Android y en IOS.
+</div>
 
-![Toliv.io nuevo sitio](/assets/img/portafolio/toliv.png)
+<div class="bento-box bento-1">
+  <img class="bento bento-a" src="/assets/img/portafolio/toliv.png" alt="Diseño nueva página de  para Toliv.io" loading="lazy">
+</div>

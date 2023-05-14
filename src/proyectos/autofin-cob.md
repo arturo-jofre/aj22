@@ -1,6 +1,7 @@
 ---
 layout: "layouts/proyecto.njk"
 title: "Software de cobranzas Autofin"
+client: Autofin
 description: "Diseño de un software para la gestión y seguimiento de cobranzas para Autofin"
 year: "2019"
 date: "2019-10-01"
