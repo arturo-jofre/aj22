@@ -215,8 +215,8 @@ a {
 }
 
 #back-to-top {
-	min-width: 2.5rem;
-	height: 2.5rem;
+	min-width: 3rem;
+	height: 3rem;
 	border-radius: .5rem;
 	display: grid;
 	place-items: center;
@@ -673,55 +673,76 @@ nav {
 	// grid-template-columns: repeat(10, 1fr);
 	// grid-template-rows: repeat(4, 1fr);
 	gap: 1.5rem;
+	grid-template-areas:
+		"a"
+		"b"
+		"c"
+		"d";
 }
 
 .bento{
 	border-radius: 1.5rem;
 	object-fit: cover;
+	
 }
 
 .bento-4{
-	grid-template-areas:
-	 "a a b b c c"
-	 "a a b b c c"
-	 "d d d d c c"
-	 "d d d d c c"
-	;
+	@include media(sm) {
+		grid-template-areas:
+		"a a b b c c"
+		"a a b b c c"
+		"d d d d c c"
+		"d d d d c c"
+		;
+	}
+	
 }
 
 .bento-3{
-	grid-template-areas:
-	 ".  a a c c ."
-	 ".  a a c c ."
-	 ".  b b c c ."
-	 ".  b b c c ."
-	;
+	@include media(sm) {
+		grid-template-areas:
+		".  a a c c ."
+		".  a a c c ."
+		".  b b c c ."
+		".  b b c c ."
+		;
+	}
+	
 }
 .bento-3s{
-	grid-template-areas:
-	 " . . a a c c c c"
-	 " . . a a c c c c"
-	 " . . b b c c c c"
-	 " . . b b c c c c"
-	;
+	@include media(sm) {
+		grid-template-areas:
+		" . . a a c c c c"
+		" . . a a c c c c"
+		" . . b b c c c c"
+		" . . b b c c c c"
+		;
+	}
+	
 }
 
 .bento-2{
-	grid-template-areas:
-	 "a a a b b b"
-	 "a a a b b b"
-	 "a a a b b b"
-	 "a a a b b b"
-	;
+	@include media(sm) {
+		grid-template-areas:
+		"a a a b b b"
+		"a a a b b b"
+		"a a a b b b"
+		"a a a b b b"
+		;
+	}
+	
 }
 
 .bento-1{
-	grid-template-areas:
-	 ". a a a a a a a a ."
-	 ". a a a a a a a a ."
-	 ". a a a a a a a a ."
-	 ". . . . . . . . . ."
-	;
+	@include media(sm) {
+		grid-template-areas:
+		". a a a a a a a a ."
+		". a a a a a a a a ."
+		". a a a a a a a a ."
+		". . . . . . . . . ."
+		;
+	}
+	
 }
 
 .bento-a {
@@ -733,12 +754,12 @@ nav {
 }
 
 .bento-c {
-	height: 100%;
+	// height: 100%;
 	grid-area: c;
 }
 
 .bento-d {
-	height: 100%;
+	// height: 100%;
 	grid-area: d;
 }
 
@@ -766,7 +787,10 @@ nav {
 .single-project {
 	padding-top: 6rem;
 	h1 {
-		font-size: 3rem;
+		font-size: 2.25rem;
+		@include media(sm) {
+			font-size: 3rem;
+		}
 	}
 	.project-info {
 		padding: 3rem 0 1rem 0;

@@ -93,6 +93,7 @@ function init() {
   if (document.querySelector('#holo')) { //This checks if this element is on the the page (in the html)
         new holo(); // If it is then it creates a new instance of the 'scrollers' function
     }
+  else{}
 
   feather.replace();
 
