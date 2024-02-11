@@ -9,18 +9,18 @@ var navitem = document.querySelector(".nav-menu");
 
 
 navitem.addEventListener(
-  "click",
-  function () {
-    nav.classList.remove("active");
-  },
-  false
+	"click",
+	function () {
+		nav.classList.remove("active");
+	},
+	false
 );
 toggle.addEventListener(
-  "click",
-  function () {
-    nav.classList.toggle("active");
-  },
-  false
+	"click",
+	function () {
+		nav.classList.toggle("active");
+	},
+	false
 );
 
 // FOOTER COPYRIGHT
@@ -31,74 +31,85 @@ document.getElementById("copy").innerHTML = `${new Date().getFullYear()}`;
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  // run whatever we need
+	// run whatever we need
 
 
-  // DARKMODE -----------------
+	// DARKMODE -----------------
 
 var btnSwitch = document.querySelector("#switch");
 localStorage.setItem("light-mode", "false");
 
 
 btnSwitch.addEventListener("click", () => {
-  document.body.classList.toggle("light");
-  btnSwitch.classList.toggle("active");
+	document.body.classList.toggle("light");
+	btnSwitch.classList.toggle("active");
 
-  // LocalStorage
-  if (document.body.classList.contains("light")) {
-    localStorage.setItem("light-mode", "true");
-  } 
-  else localStorage.setItem("light-mode", "false");
+	// LocalStorage
+	if (document.body.classList.contains("light")) {
+		localStorage.setItem("light-mode", "true");
+	} 
+	else localStorage.setItem("light-mode", "false");
 });
 if (localStorage.getItem("light-mode") === "true") {
-  document.body.classList.add("light");
-  btnSwitch.classList.add("active");
+	document.body.classList.add("light");
+	btnSwitch.classList.add("active");
 } 
 else {
-  document.body.classList.remove("light");
-  btnSwitch.classList.remove("active");
+	document.body.classList.remove("light");
+	btnSwitch.classList.remove("active");
 }
 
 
 var animatio = bodymovin.loadAnimation({
-  container: document.getElementById('darkanim'),
-  renderer:'svg',
-  loop:false,
-  autoplay:false,
-  path:'/assets/img/lottie/sun-moon-2.json',
-  
+	container: document.getElementById('darkanim'),
+	renderer:'svg',
+	loop:false,
+	autoplay:false,
+	path:'/assets/img/lottie/switch.json',
+	
 });
-animatio.setSpeed(8);
+animatio.setSpeed(1);
+animatio.setDirection(-1);
 animatio.play();
 // var dark = 0;
 
 btnSwitch.addEventListener('click',function(){
-    if(localStorage.getItem("light-mode") === "false"){
-        animatio.play();
-        animatio.setDirection(1);
-        document.getElementById('test').style.animation = "back .75s 1 forwards";
-    }
-    else{
-        animatio.play();
-        animatio.setDirection(-1);
-        document.getElementById('test').style.animation = "back .75s 1 forwards reverse";
-  
-    }
-  })
+		if(localStorage.getItem("light-mode") === "false"){
 
+				animatio.play();
+				animatio.setDirection(-1);
+		}
+		else{
+				animatio.play();
+				animatio.setDirection(1);
+		}
+	})
+
+	// btnSwitch.addEventListener('click',function(){
+	//   if(localStorage.getItem("light-mode") === "false"){
+	//       animatio.play();
+	//       animatio.setDirection(1);
+	//       document.getElementById('test').style.animation = "back .75s 1 forwards";
+	//   }
+	//   else{
+	//       animatio.play();
+	//       animatio.setDirection(-1);
+	//       document.getElementById('test').style.animation = "back .75s 1 forwards reverse";
+	//   }
+	// })
 
 });
 
 function init() {
-  if (document.querySelector('#holo')) { //This checks if this element is on the the page (in the html)
-        new holo(); // If it is then it creates a new instance of the 'scrollers' function
-    }
-  else{}
+	if (document.querySelector('#holo')) { //This checks if this element is on the the page (in the html)
+				new holo(); // If it is then it creates a new instance of the 'scrollers' function
+		}
+	else{}
 
-  feather.replace();
+	feather.replace();
 
-  // LottieInteractivity.create({
-  //   Setspeed: 2,
+	// LottieInteractivity.create({
+	//   Setspeed: 2,
 	// 	player:'#sun-moon',
 	// 	mode:"cursor",
 	// 	actions: [
@@ -108,54 +119,52 @@ function init() {
 	// 	]
 	// });
 
-  // Add more here as the project grows...
+	// Add more here as the project grows...
 }
 function unload() {
-  feather.replace();
+	feather.replace();
 }
 
 var holoStart = new holo();
 
 function holo(){
-  
-  document.getElementById("test").addEventListener("mousemove", function (event) {
-    handleMouseMove(event);
-  });
+	
+	document.getElementById("test").addEventListener("mousemove", function (event) {
+		handleMouseMove(event);
+	});
 
-  let holographicElement = document.getElementById("holo");
-  let gradElement = window.getComputedStyle(holographicElement, "::before");
+	let holographicElement = document.getElementById("holo");
+	let gradElement = window.getComputedStyle(holographicElement, "::before");
 
-  window.addEventListener("deviceorientation", handleDeviceOrientation, true);
+	window.addEventListener("deviceorientation", handleDeviceOrientation, true);
 
-  function updateHolographicBackground(value) {
-    const percentage = value * 200;
-    holographicElement.style.backgroundPosition = percentage + "%";
-  }
-  
-  function updateGradientBefore(x,y){
-    var grad_pos = ` ${x}% ${y}%;`;
-    holographicElement.style.setProperty('--BgPosition', grad_pos);
-  }
- 
-  
-  function handleMouseMove(event) {
-    const x = event.clientX;
-    const y = event.clientY;
-    const width = document.documentElement.clientWidth;
-    const value = x / width;
-    updateHolographicBackground(value);
-    updateGradientBefore(x,y);
-  }
-  
-  function handleDeviceOrientation(event) {
-    const z = Math.abs(event.gamma); // rotation degrees from 0 to 360
-    const value = z / 90;
-    updateHolographicBackground(value);
-    updateGradientBefore(value);
-  }
+	function updateHolographicBackground(value) {
+		const percentage = value * 200;
+		holographicElement.style.backgroundPosition = percentage + "%";
+	}
+	
+	function updateGradientBefore(x,y){
+		var grad_pos = ` ${x}% ${y}%;`;
+		holographicElement.style.setProperty('--BgPosition', grad_pos);
+	}
+	
+	function handleMouseMove(event) {
+		const x = event.clientX;
+		const y = event.clientY;
+		const width = document.documentElement.clientWidth;
+		const value = x / width;
+		updateHolographicBackground(value);
+		updateGradientBefore(x,y);
+	}
+	
+	function handleDeviceOrientation(event) {
+		const z = Math.abs(event.gamma); // rotation degrees from 0 to 360
+		const value = z / 90;
+		updateHolographicBackground(value);
+		updateGradientBefore(value);
+	}
 
-  
-  
+	
 }
 
 swup = new Swup();

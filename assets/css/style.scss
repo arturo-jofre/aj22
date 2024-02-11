@@ -45,6 +45,7 @@ body {
 	font-size: 16px;
 	font-family: 'Inter', sans-serif;
 	font-weight: 400;
+	letter-spacing: -.05rem;
 	min-height: 100%;
 	display: grid;
 	grid-template-columns: auto 0px;
@@ -57,19 +58,22 @@ body {
 }
 
 body:after {
-
-	background-size: 80px 80px;
+	background-size: 64px 64px;
 	content: "";
-    animation: dotScroll 16s linear infinite;
-    background-image: radial-gradient(circle,$grey-600 var(--dot-size),transparent 0);
+	animation: dotScroll 24s linear infinite;
+	background-image: radial-gradient(circle,$grey-600 var(--dot-size),transparent 0);
 	// background-size: calc(14.2857142857% - 1px) 100px;
-    background-position: -60px 0;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
+	background-position: -64px 0;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
 	position: absolute;
 	inset: 0;
 	z-index: -10;
+	@include media(sm) {
+		background-size: 80px 80px;
+		background-position: -64px 0;
+	}
 }
 body.light:after {
 	background-image: radial-gradient($grey-500 var(--dot-size), transparent 1px);
@@ -158,6 +162,11 @@ a {
 	display: flex;
 	align-items: center;
 }
+.bottom{
+	display: flex;
+	align-items: end;
+}
+
 .text-right{
 	text-align: right;
 }
@@ -286,7 +295,7 @@ main {
 header {
 	position: fixed;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
 	background-color: rgba($dark, $alpha: 0.5);
 	backdrop-filter: blur(8px);
 	body.light & {
@@ -297,12 +306,9 @@ header {
 nav {
 	align-items: center;
 	display: flex;
-	// height: 6rem;
 	justify-content: space-between;
 	padding: 1rem 0;
 	z-index: 1;
-	
-	
 	.logo {
 		height: 3rem;
 	}
@@ -340,7 +346,7 @@ nav {
 
 .nav-menu {
 	position: absolute;
-	height: calc(100vh - 5rem);
+	height: calc(100vh);
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -349,13 +355,12 @@ nav {
 	top: -1000%;
 	bottom: 0;
 	transition: .4s ease;
-	z-index: -1;
+	z-index: 1;
 	gap: .5rem;
 	
 	&.active {
-		top: 5rem;
+		top:0;
 		background-color: rgba($dark, $alpha: 1);
-		margin: -1rem 0;
 		padding-top: 4rem;
 		body.light & {
 			background-color: rgba($light, $alpha: 1);
@@ -418,7 +423,7 @@ nav {
 	border: none;
 	font-weight: 700;
 	font-size: 1rem;
-	padding: .5rem;
+	padding: .75rem;
 	@include media(sm) {
 		display: none;
 	}
@@ -471,22 +476,22 @@ nav {
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
-	padding-top: 3.5rem;
+	padding: 3.5rem 0;
 	h1 {
 		font-size: 9vw;
-		line-height: 9vw;
+		line-height: 11vw;
 		body.light & {
 			color: $dark;
 		}
 		
 		@include media(sm){
 			font-size: clamp(2.5rem, 4vw, 3.25rem);
-			line-height: clamp(2.5rem, 4vw, 4rem);
+			line-height: clamp(2.5rem, 4.5vw, 4rem);
 		}
 	}
 	@include media(sm) {
 		.box {
-			max-width: 60%;
+			max-width: 80%;
 		}
 	}
 	.subtitle {
@@ -542,7 +547,7 @@ nav {
 }
 
 .portafolio {
-	padding: 2rem 0;
+	padding: 8rem 0;
 	h2 {
 		font-size: 2.5rem;
 		margin-bottom: 2rem;
@@ -976,15 +981,16 @@ footer {
 	h2 {
 		font-size: 2rem;
 		color: $grey-500;
-		font-weight: 400;
+		font-weight: 600;
 	}
 
 	.grid {
 		display: grid;
 		align-items: center;
-		gap: 2rem;
+		gap: 1rem;
 		@include media(sm) {
-			grid-template-columns: 2fr 1fr;
+			grid-template-columns: 2fr auto;
+			gap: 2rem;
 		}
 	}
 	.social {
@@ -998,7 +1004,7 @@ footer {
 	}
 	.mail {
 		font-size: clamp(2rem, 4vw, 2.5rem);
-		font-weight: 500;
+		font-weight: 600;
 	}
 }
 
@@ -1089,6 +1095,21 @@ footer {
   opacity: .5;
   mix-blend-mode: color-dodge;
   transition: all .33s ease;
+  -webkit-animation: bgmove 30s ease infinite;
+    -moz-animation: bgmove 30s ease infinite;
+    animation: bgmove 30s ease infinite;
+}
+
+@keyframes bgmove {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 // #holo:before {
