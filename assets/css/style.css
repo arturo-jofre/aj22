@@ -1,5 +1,5 @@
 /* Box sizing rules */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;800&display=swap");
 *,
 *::before,
 *::after {
@@ -80,6 +80,9 @@ select {
 :root {
   color-scheme: light dark; /* both supported */
   --back-to-top-offset: 200px;
+  --color1: rgb(0, 231, 255);
+  --color2: rgb(255, 0, 231);
+  --dot-size: 2px;
 }
 
 html,
@@ -94,9 +97,7 @@ html {
 body {
   background-color: hsl(0, 6%, 10%);
   opacity: 1;
-  background-image: radial-gradient(hsl(27, 5%, 43%) 1px, transparent 1px);
-  background-size: 56px 56px;
-  color: white;
+  color: hsl(24, 25%, 92%);
   font-size: 16px;
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -104,13 +105,39 @@ body {
   display: grid;
   grid-template-columns: auto 0px;
   transition: 0.5s ease-in-out;
+  position: relative;
 }
 body.light {
   background-color: hsl(24, 25%, 92%);
   color: hsl(0, 6%, 10%);
-  background-image: radial-gradient(hsl(27, 5%, 43%) 1px, transparent 1px);
 }
 
+body:after {
+  background-size: 80px 80px;
+  content: "";
+  animation: dotScroll 16s linear infinite;
+  background-image: radial-gradient(circle, hsl(27, 5%, 43%) var(--dot-size), transparent 0);
+  background-position: -60px 0;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+}
+
+body.light:after {
+  background-image: radial-gradient(hsl(23, 12%, 69%) var(--dot-size), transparent 1px);
+}
+
+@keyframes dotScroll {
+  0% {
+    background-position-y: 140px;
+  }
+  to {
+    background-position-y: 0;
+  }
+}
 ::-moz-selection { /* Code for Firefox */
   color: hsl(0, 6%, 10%);
   background: hsl(24, 25%, 92%);
@@ -146,6 +173,10 @@ body.light #holo::selection {
   background-blend-mode: normal;
 }
 
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
 h1 {
   font-size: 3rem;
   font-weight: 700;
@@ -161,7 +192,7 @@ h3 {
 }
 
 a {
-  color: white;
+  color: hsl(24, 25%, 92%);
 }
 body.light a {
   color: hsl(0, 6%, 10%);
@@ -216,7 +247,7 @@ body.light a {
 .btn {
   background-color: hsl(0, 6%, 10%);
   border: 2px solid hsl(0, 6%, 10%);
-  color: white;
+  color: hsl(24, 25%, 92%);
   display: flex;
   align-items: center;
   padding: 0.25rem 1rem;
@@ -232,7 +263,7 @@ body.light a {
   border-color: hsl(0, 4%, 20%);
 }
 .btn-primary {
-  color: white;
+  color: hsl(24, 25%, 92%);
   border-color: hsl(0, 4%, 20%);
   background-color: hsl(0, 4%, 20%);
 }
@@ -268,7 +299,7 @@ body.light .btn:hover {
 }
 
 #back-to-top {
-  color: white;
+  color: hsl(24, 25%, 92%);
   place-self: end;
   position: sticky;
   margin-top: calc(100vh + var(--back-to-top-offset));
@@ -437,7 +468,7 @@ body.light .nav-menu .nav-link a:hover {
 }
 
 .toggle {
-  color: white;
+  color: hsl(24, 25%, 92%);
   background-color: transparent;
   border: none;
   font-weight: 700;
@@ -468,7 +499,7 @@ body.light .toggle {
 }
 
 .switch {
-  color: white;
+  color: hsl(24, 25%, 92%);
   background-color: transparent;
   border: none;
   text-align: center;
@@ -544,7 +575,7 @@ body.light .hero .subtitle {
 body.light .hero .btn-primary {
   background-color: hsl(0, 6%, 10%);
   border: hsl(0, 6%, 10%);
-  color: white;
+  color: hsl(24, 25%, 92%);
 }
 body.light .hero .btn-primary:hover {
   background: hsl(27, 5%, 43%);
@@ -930,16 +961,16 @@ body.light .page-about .list-item {
 .page-about .resume .item {
   display: grid;
   grid-template-columns: 15rem auto;
-  gap: 3rem;
+  gap: 1rem;
   color: hsl(27, 5%, 43%);
 }
 .page-about .resume .item h3 {
   font-size: 1.25rem;
   font-weight: 500;
-  color: white;
+  color: hsl(24, 25%, 92%);
 }
 body.light .page-about .resume .item h3 {
-  background-color: hsl(21, 19%, 86%);
+  color: hsl(0, 4%, 20%);
 }
 
 .page-404 {
@@ -1041,6 +1072,20 @@ footer .mail {
   position: relative;
   background-image: linear-gradient(to right, rgb(245, 245, 245), rgb(194, 255, 182), rgb(255, 226, 162), rgb(255, 163, 182), rgb(221, 169, 255), rgb(162, 209, 255), rgb(245, 245, 245));
   background-size: 200%;
+}
+
+#holo:before,
+#holo:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  mix-blend-mode: color-dodge;
+  transition: all 0.33s ease;
 }
 
 .color-test {

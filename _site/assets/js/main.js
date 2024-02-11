@@ -123,6 +123,7 @@ function holo(){
   });
 
   let holographicElement = document.getElementById("holo");
+  let gradElement = window.getComputedStyle(holographicElement, "::before");
 
   window.addEventListener("deviceorientation", handleDeviceOrientation, true);
 
@@ -131,18 +132,30 @@ function holo(){
     holographicElement.style.backgroundPosition = percentage + "%";
   }
   
+  function updateGradientBefore(x,y){
+    var grad_pos = ` ${x}% ${y}%;`;
+    holographicElement.style.setProperty('--BgPosition', grad_pos);
+  }
+ 
+  
   function handleMouseMove(event) {
     const x = event.clientX;
+    const y = event.clientY;
     const width = document.documentElement.clientWidth;
     const value = x / width;
     updateHolographicBackground(value);
+    updateGradientBefore(x,y);
   }
   
   function handleDeviceOrientation(event) {
     const z = Math.abs(event.gamma); // rotation degrees from 0 to 360
     const value = z / 90;
     updateHolographicBackground(value);
+    updateGradientBefore(value);
   }
+
+  
+  
 }
 
 swup = new Swup();

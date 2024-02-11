@@ -1,6 +1,6 @@
 @import "reset";
 @import "responsive";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;800&display=swap');
 
 // COLORES
 // $dark: #1B1919;
@@ -22,6 +22,9 @@ $grey-800: hsl(0, 4%, 20%);
 :root {
 	color-scheme: light dark; /* both supported */
 	--back-to-top-offset: 200px;
+	--color1: rgb(0, 231, 255);
+	--color2: rgb(255, 0, 231);
+	--dot-size: 2px;
 }
 
 html,
@@ -36,9 +39,9 @@ html {
 body {
 	background-color: $dark;
 	opacity: 1;
-	background-image: radial-gradient($grey-600 1px, transparent 1px);
-	background-size: 56px 56px;
-	color: white;
+	// background-image: radial-gradient($grey-600 1px, transparent 1px);
+	// background-size: 56px 56px;
+	color: $grey-100;
 	font-size: 16px;
 	font-family: 'Inter', sans-serif;
 	font-weight: 400;
@@ -46,11 +49,40 @@ body {
 	display: grid;
 	grid-template-columns: auto 0px;
 	transition: .5s ease-in-out;
+	position: relative;
 	&.light {
 		background-color: $light ;
 		color: $dark;
-		background-image: radial-gradient($grey-600 1px, transparent 1px);
 	}
+}
+
+body:after {
+
+	background-size: 80px 80px;
+	content: "";
+    animation: dotScroll 16s linear infinite;
+    background-image: radial-gradient(circle,$grey-600 var(--dot-size),transparent 0);
+	// background-size: calc(14.2857142857% - 1px) 100px;
+    background-position: -60px 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+	position: absolute;
+	inset: 0;
+	z-index: -10;
+}
+body.light:after {
+	background-image: radial-gradient($grey-500 var(--dot-size), transparent 1px);
+}
+
+@keyframes dotScroll {
+    0% {
+        background-position-y: 140px
+    }
+
+    to {
+        background-position-y: 0
+    }
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -64,9 +96,6 @@ body.light ::-moz-selection { /* Code for Firefox */
 body.light a ::-moz-selection {
 	color: inherit;
 }
-// body.light h1 ::-moz-selection {
-// 	color: white;
-// }
 
 ::selection {
 	color: $dark;
@@ -88,6 +117,10 @@ body.light #holo::selection    {
 	background-blend-mode: normal;
 }
 
+h1, h2, h3{
+	text-wrap: balance;
+}
+
 h1 {
 	font-size: 3rem;
 	font-weight: 700;
@@ -102,7 +135,7 @@ h3 {
 	font-size: 1.5rem;
 }
 a {
-	color: white;
+	color: $grey-100;
 	body.light &{
 		color: $dark;
 	}
@@ -138,7 +171,6 @@ a {
 	max-width: 90rem;
 	width: 100%;
 	margin: 0 auto;
-	// padding: 0 24px;
 	padding: 0 5%;
 }
 .stack > * + * {
@@ -154,7 +186,7 @@ a {
 .btn {
 	background-color: $dark;
 	border: 2px solid $dark;
-	color: white;
+	color: $grey-100;
 	display: flex;
     align-items: center;
 	padding: .25rem 1rem;
@@ -169,7 +201,7 @@ a {
 		border-color: $grey-800;
 	}
 	&-primary {
-		color: white;
+		color: $grey-100;
 		border-color: $grey-800;
 		background-color: $grey-800;
 		&:hover {
@@ -206,7 +238,7 @@ a {
 }
 
 #back-to-top {
-	color: white;
+	color: $grey-100;
 	place-self: end;
 	position: sticky;
 	margin-top: calc(100vh + var(--back-to-top-offset));
@@ -247,7 +279,6 @@ a {
 
 main {
 	padding-bottom: 6rem;
-	// padding-top: 6rem;
 }
 
 // HEADER
@@ -382,7 +413,7 @@ nav {
 }
 
 .toggle {
-	color: white;
+	color: $grey-100;
 	background-color: transparent;
 	border: none;
 	font-weight: 700;
@@ -407,7 +438,7 @@ nav {
 	transition: .2s ease;
 }
 .switch {
-	color: white;
+	color: $grey-100;
 	background-color: transparent;
 	border: none;
 	text-align: center;
@@ -483,7 +514,7 @@ nav {
 	body.light & .btn-primary {
 		background-color: $dark;
 		border: $dark;
-		color: white;
+		color: $grey-100;
 		&:hover{
 			background: $grey-600;
 		}
@@ -612,8 +643,6 @@ nav {
 		}
 	}
 	.service {
-		// background-color: rgba($dark, $alpha: 0.5);
-		// backdrop-filter: blur(8px);
 		border-radius: 1rem;
 		line-height: 1.5rem;
 		
@@ -910,17 +939,16 @@ nav {
 		.item {
 			display: grid;
 			grid-template-columns: 15rem auto;
-			gap: 3rem;
+			gap: 1rem;
 			color: $grey-600;
 			h3 {
 				font-size: 1.25rem;
 				font-weight: 500;
-				color: white;
+				color: $grey-100;
 				body.light & {
-					background-color: $grey-300;
+					color: $grey-800;
 				}
 			}
-			
 		}
 	}
 }
@@ -1049,6 +1077,36 @@ footer {
 	);
 	background-size: 200%;
 }
+#holo:before,
+#holo:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  opacity: .5;
+  mix-blend-mode: color-dodge;
+  transition: all .33s ease;
+}
+
+// #holo:before {
+// 	background-position: var(--BgPosition, 50% 50%);
+// 	background-size: 300% 300%;
+// 	background-image: linear-gradient(
+// 	  115deg,
+// 	  transparent 0%,
+// 	  var(--color1) 25%,
+// 	  transparent 47%,
+// 	  transparent 53%,
+// 	  var(--color2) 75%,
+// 	  transparent 100%
+// 	);
+// 	opacity: .5;
+// 	filter: brightness(.5) contrast(1);
+// 	z-index: 1;
+//   }
 
 .color-test {
 	color:#c2ffb6;
@@ -1106,6 +1164,7 @@ body.light #holo {
 	  );
 	background-size: 200%;
 	background-blend-mode: multiply;
+	
 }
 
 // @keyframes hue {
