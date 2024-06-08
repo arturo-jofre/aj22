@@ -201,7 +201,7 @@ a {
 	padding: .25rem 1rem;
 	border-radius: .75rem;
 	text-decoration: none;
-	transition: .2s ease;
+	transition: .5s ease;
 	font-weight: 700;
 	max-width: fit-content;
 	&:hover {
@@ -354,7 +354,7 @@ nav {
 	right: 0;
 	top: -1000%;
 	bottom: 0;
-	transition: .4s ease;
+	transition: .5s ease;
 	z-index: 1;
 	gap: .5rem;
 	
@@ -479,7 +479,7 @@ nav {
 	padding: 3.5rem 0;
 	h1 {
 		font-size: 9vw;
-		line-height: 11vw;
+		line-height: 1.25;
 		body.light & {
 			color: $dark;
 		}
@@ -496,7 +496,7 @@ nav {
 	}
 	.subtitle {
 		font-size: 9vw;
-		line-height: 9vw;
+		line-height: 1.2;
 		margin-bottom: 2rem;
 		font-weight: 700;
 		color: $grey-500;
@@ -943,9 +943,12 @@ nav {
 		}
 		.item {
 			display: grid;
-			grid-template-columns: 15rem auto;
+			grid-template-columns: auto;
 			gap: 1rem;
 			color: $grey-600;
+			@include media(sm) {
+				grid-template-columns: 15rem auto ;
+			}
 			h3 {
 				font-size: 1.25rem;
 				font-weight: 500;
@@ -1053,19 +1056,6 @@ footer {
 	// animation: hue 5s infinite alternate ;
 }
 
-// #holo {
-// 	display: inline-block;
-// 	position: relative;
-// 	background-image: linear-gradient(
-// 	  to right,
-// 	  rgb(194, 255, 182),
-//     rgb(255, 163, 182),
-//     rgb(221, 169, 255),
-//     rgb(162, 209, 255),
-// 	rgb(194, 255, 182)
-// 	);
-// 	background-size: 200%;
-// }
 
 .holo {
 	display: inline-block;
@@ -1142,25 +1132,6 @@ footer {
 	stroke: url(#gradient-vertical) gray;
 }
 
-// #holo::after{
-// 	position: absolute;
-// 	content:'';
-// 	background-image: linear-gradient(
-// 	  to right,
-// 	  rgb(194, 255, 182),
-//     rgb(255, 163, 182),
-//     rgb(221, 169, 255),
-//     rgb(162, 209, 255),
-// 	rgb(194, 255, 182)
-// 	);
-// 	background-size: 200%;
-// 	filter: blur(16px);
-// 	top: 0;
-// 	bottom: 0;
-// 	left: 0;
-// 	right: 0;
-// }
-
 body.light #holo {
 	background-image: linear-gradient(
 	  to right,
@@ -1185,29 +1156,7 @@ body.light #holo {
 	  );
 	background-size: 200%;
 	background-blend-mode: multiply;
-	
 }
-
-// @keyframes hue {
-//   from {
-//     -webkit-filter: hue-rotate(0deg);
-//   }
-//   to {
-//     -webkit-filter: hue-rotate(-360deg);
-//   }
-// }
-
-// @keyframes hue {
-// 	0% {
-// 		background-position: 0% 50%;
-// 	}
-// 	50% {
-// 		background-position: 100% 50%;
-// 	}
-// 	100% {
-// 		background-position: 0% 50%;
-// 	}
-// }
 
 .holo2 {
 	background-image: linear-gradient(
@@ -1220,7 +1169,7 @@ body.light #holo {
 }
 
 .transition-fade {
-	transition: 0.5s;
+	transition: 0.5s ease-in-out;
 	opacity: 1;
 }
 

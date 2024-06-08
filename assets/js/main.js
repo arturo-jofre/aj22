@@ -68,7 +68,7 @@ var animatio = bodymovin.loadAnimation({
 	path:'/assets/img/lottie/switch.json',
 	
 });
-animatio.setSpeed(1);
+animatio.setSpeed(2);
 animatio.setDirection(-1);
 animatio.play();
 // var dark = 0;
