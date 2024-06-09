@@ -492,20 +492,22 @@ nav {
 	@include media(sm) {
 		.box {
 			max-width: 80%;
+			margin-top: 6rem;
 		}
 	}
 	.subtitle {
-		font-size: 9vw;
-		line-height: 1.2;
-		margin-bottom: 2rem;
-		font-weight: 700;
 		color: $grey-500;
+		font-size: 9vw;	
+		font-weight: 700;
+		line-height: 1.2;
+		margin-bottom: 1rem;
 		body.light &{
 			color: $grey-800;
 		}
 		@include media(sm){
 			font-size: clamp(2.5rem, 4vw, 3.25rem);
 			line-height: clamp(2.5rem, 4vw, 4rem);
+			margin-bottom: 2rem;
 		}
 	}
 	.cta {
@@ -1073,6 +1075,18 @@ footer {
 	);
 	background-size: 200%;
 }
+
+.anime{
+	-webkit-animation: bgmove 3s ease infinite;
+    -moz-animation: bgmove 3s ease infinite;
+    animation: bgmove 3s ease infinite;
+	@include media(sm) {
+		-webkit-animation: none;
+    	-moz-animation: none;
+    	animation: none;
+	}
+}
+
 #holo:before,
 #holo:after {
   content: "";

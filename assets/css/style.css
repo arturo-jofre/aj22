@@ -555,14 +555,15 @@ body.light .hero h1 {
 @media (min-width: 767px) {
   .hero .box {
     max-width: 80%;
+    margin-top: 6rem;
   }
 }
 .hero .subtitle {
-  font-size: 9vw;
-  line-height: 1.2;
-  margin-bottom: 2rem;
-  font-weight: 700;
   color: hsl(23, 12%, 69%);
+  font-size: 9vw;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 body.light .hero .subtitle {
   color: hsl(0, 4%, 20%);
@@ -571,6 +572,7 @@ body.light .hero .subtitle {
   .hero .subtitle {
     font-size: clamp(2.5rem, 4vw, 3.25rem);
     line-height: clamp(2.5rem, 4vw, 4rem);
+    margin-bottom: 2rem;
   }
 }
 .hero .cta {
@@ -1089,6 +1091,19 @@ footer .mail {
   position: relative;
   background-image: linear-gradient(to right, rgb(245, 245, 245), rgb(194, 255, 182), rgb(255, 226, 162), rgb(255, 163, 182), rgb(221, 169, 255), rgb(162, 209, 255), rgb(245, 245, 245));
   background-size: 200%;
+}
+
+.anime {
+  -webkit-animation: bgmove 3s ease infinite;
+  -moz-animation: bgmove 3s ease infinite;
+  animation: bgmove 3s ease infinite;
+}
+@media (min-width: 767px) {
+  .anime {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+  }
 }
 
 #holo:before,
